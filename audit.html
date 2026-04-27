@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet" />
+<meta name="referrer" content="no-referrer" />
+<title>Audit SEO &amp; GEO — Spit'Up Call Solutions · Banana Navy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1F3D;
+    --navy-deep:#06152A;
+    --navy-soft:#102A4F;
+    --banana:#FFD93D;
+    --banana-soft:#FFE680;
+    --banana-deep:#E5B800;
+    --paper:#FBF9F2;
+    --paper-2:#F4F0E2;
+    --ink:#0A1F3D;
+    --ink-mute:#4A5A75;
+    --line:#D8D2BE;
+    --line-soft:#E8E2D0;
+    --danger:#B83A26;
+    --danger-bg:#FBEBE6;
+    --warn:#B5821A;
+    --warn-bg:#FFF6D9;
+    --ok:#2F6B3D;
+    --ok-bg:#E6F0E5;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Geist',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:15px;line-height:1.6;font-feature-settings:"ss01" 1,"tnum" 1,"cv11" 1;overflow-x:hidden}
+  .page{max-width:1120px;margin:0 auto;padding:0 32px 96px}
+  h1,h2,h3,h4{margin:0 0 12px;color:var(--ink)}
+  h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:64px;letter-spacing:-.015em;line-height:1.02}
+  h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:38px;letter-spacing:-.01em;line-height:1.1}
+  h3{font-family:'Geist',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.005em}
+  h4{font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute)}
+  p{margin:0 0 12px;text-wrap:pretty}
+  em{font-style:italic;color:var(--ink-mute)}
+  strong,b{font-weight:600;color:var(--ink)}
+  a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--banana);text-decoration-thickness:2px;text-underline-offset:3px}
+  ul,ol{padding-left:20px;margin:10px 0}
+  li{margin-bottom:6px}
+  code,.mono{font-family:'Geist Mono',ui-monospace,monospace;font-size:.88em;background:var(--paper-2);padding:1px 6px;border-radius:3px;color:var(--navy)}
+
+  /* WORDMARK */
+  .bn-mark{display:inline-flex;align-items:center;gap:10px;font-family:'Instrument Serif',serif;font-size:22px;letter-spacing:.01em;color:var(--navy)}
+  .bn-mark .dot{width:10px;height:10px;background:var(--banana);border-radius:999px;display:inline-block;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--banana-soft)}
+  .bn-mark em{font-style:italic;color:var(--ink-mute);font-family:'Instrument Serif',serif;font-size:14px;letter-spacing:.04em}
+
+  /* HERO */
+  .hero{background:var(--navy);color:var(--paper);margin:0 -32px 56px;padding:48px 32px 88px;position:relative;overflow:hidden;border-radius:0 0 24px 24px}
+  .hero::before{content:"";position:absolute;inset:auto -40px -160px auto;width:520px;height:520px;background:radial-gradient(circle,var(--banana-soft) 0%,transparent 65%);opacity:.18;pointer-events:none}
+  .hero-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:18px;margin-bottom:64px}
+  .hero-top .bn-mark{color:var(--paper)}
+  .hero-top .bn-mark em{color:var(--banana-soft)}
+  .hero-top .meta-tag{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--banana-soft);text-transform:uppercase}
+  .hero h1{color:var(--paper);max-width:920px}
+  .hero h1 i{font-style:italic;color:var(--banana)}
+  .hero .kicker{font-family:'Geist Mono',monospace;font-size:11px;color:var(--banana);letter-spacing:.24em;text-transform:uppercase;margin-bottom:24px}
+  .hero-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border-top:1px solid rgba(255,255,255,.18);padding-top:24px}
+  .hero-meta div{padding-right:24px;border-right:1px solid rgba(255,255,255,.12)}
+  .hero-meta div:last-child{border-right:none}
+  .hero-meta .label{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--banana-soft);text-transform:uppercase;margin-bottom:6px}
+  .hero-meta .val{font-family:'Instrument Serif',serif;font-size:22px;color:var(--paper);line-height:1.2}
+  .hero-meta .val small{font-family:'Geist',sans-serif;font-size:12px;color:rgba(255,255,255,.6);font-weight:400;display:block;margin-top:2px}
+  .hero-engagement{position:relative;margin-top:36px;padding:18px 22px;background:rgba(255,217,61,.10);border-left:3px solid var(--banana);border-radius:6px;color:var(--paper);max-width:780px;font-size:14.5px}
+  .hero-engagement b{color:var(--banana)}
+
+  /* SECTIONS */
+  section{margin:72px 0;scroll-margin-top:24px}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:18px}
+  .sec-num{font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.2em;padding-top:8px}
+  .sec-lead{color:var(--ink-mute);font-size:15px;margin:14px 0 28px;max-width:820px;font-style:italic;font-family:'Instrument Serif',serif;font-size:19px;line-height:1.4}
+
+  /* CARDS */
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px 30px;margin-bottom:18px}
+  .card.tinted{background:var(--paper-2);border-color:var(--line)}
+  .card.danger{border-left:3px solid var(--danger)}
+  .card.warn{border-left:3px solid var(--banana-deep)}
+  .card.ok{border-left:3px solid var(--ok)}
+  .card-title{font-family:'Geist Mono',monospace;color:var(--ink-mute);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+
+  /* SCORE HERO */
+  .score-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:24px 0}
+  .score-hero .left{padding:48px 44px;background:var(--navy);color:var(--paper);position:relative}
+  .score-hero .left::before{content:"";position:absolute;top:24px;right:24px;width:60px;height:60px;border:1px solid var(--banana);border-radius:50%}
+  .score-hero .left::after{content:"";position:absolute;top:38px;right:38px;width:32px;height:32px;background:var(--banana);border-radius:50%}
+  .score-hero .label{font-family:'Geist Mono',monospace;font-size:10px;color:var(--banana-soft);letter-spacing:.24em;text-transform:uppercase;margin-bottom:24px}
+  .score-hero .num{font-family:'Instrument Serif',serif;font-weight:400;font-size:180px;line-height:.9;letter-spacing:-.05em;color:var(--paper);display:flex;align-items:flex-end;gap:4px}
+  .score-hero .num em{font-style:italic;font-size:48px;color:var(--banana);font-family:'Instrument Serif',serif;margin-bottom:14px;letter-spacing:0}
+  .score-hero .palier{font-family:'Geist Mono',monospace;font-size:11px;color:var(--banana);letter-spacing:.24em;text-transform:uppercase;margin-top:18px}
+  .score-hero .palier::before{content:"";display:inline-block;width:24px;height:1px;background:var(--banana);vertical-align:middle;margin-right:10px}
+  .score-hero .right{padding:40px 36px;background:#fff;display:flex;flex-direction:column;justify-content:center}
+  .score-hero .right h3{font-family:'Instrument Serif',serif;font-size:28px;font-weight:400;line-height:1.2;margin-bottom:14px}
+  .score-hero .right p{color:var(--ink-mute);font-size:14.5px;line-height:1.55}
+
+  .dim-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:8px 0 0}
+  .dim{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 16px}
+  .dim .lbl{font-family:'Geist Mono',monospace;font-size:9.5px;color:var(--ink-mute);letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px;line-height:1.4}
+  .dim .val{font-family:'Instrument Serif',serif;font-size:32px;color:var(--navy);line-height:1}
+  .dim .val em{font-size:14px;color:var(--ink-mute);font-style:italic}
+  .dim .bar{margin-top:10px;height:3px;background:var(--paper-2);border-radius:2px;overflow:hidden}
+  .dim .bar i{display:block;height:100%;background:var(--banana)}
+
+  /* TABLES */
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
+  thead th{background:var(--navy);color:var(--paper);text-align:left;font-weight:500;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:14px 16px;font-family:'Geist Mono',monospace}
+  tbody td{padding:13px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:var(--paper-2)}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  td.url{font-family:'Geist Mono',monospace;font-size:12.5px;color:var(--navy-soft);word-break:break-word}
+  .table-wrap{overflow-x:auto;margin:0 0 18px;border-radius:10px}
+  .table-cap{color:var(--ink-mute);font-size:13px;margin:-6px 0 18px;font-style:italic}
+
+  /* PRIORITY BADGES */
+  .pri{display:inline-block;font-family:'Geist Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:.16em;padding:4px 9px;border-radius:3px;text-transform:uppercase;white-space:nowrap}
+  .pri.critique{background:var(--danger);color:#fff}
+  .pri.haute{background:var(--danger-bg);color:var(--danger);border:1px solid var(--danger)}
+  .pri.moyenne{background:var(--warn-bg);color:var(--warn);border:1px solid var(--banana-deep)}
+  .pri.maintenir{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok)}
+  .pri.confirmer{background:var(--paper-2);color:var(--ink-mute);border:1px solid var(--line)}
+  .pri.easy{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok)}
+  .pri.medium{background:var(--warn-bg);color:var(--warn);border:1px solid var(--banana-deep)}
+
+  /* KPI GRID */
+  .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 22px;position:relative}
+  .kpi .k-label{font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
+  .kpi .k-value{font-family:'Instrument Serif',serif;font-size:44px;color:var(--navy);line-height:1;letter-spacing:-.02em;font-weight:400}
+  .kpi .k-value .k-unit{font-size:18px;color:var(--banana-deep);margin-left:2px;font-style:italic}
+  .kpi .k-sub{color:var(--ink-mute);font-size:12px;margin-top:8px;line-height:1.4}
+
+  /* TARGETS */
+  .target-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+  .target{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 22px;position:relative}
+  .target .t-label{color:var(--ink-mute);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+  .target .t-now{color:var(--ink-mute);font-size:12px;margin-bottom:8px}
+  .target .t-now b{color:var(--danger)}
+  .target .arrow{display:inline-block;color:var(--banana-deep);font-family:'Instrument Serif',serif;font-style:italic;margin:0 6px}
+  .target .t-goal{font-family:'Instrument Serif',serif;font-size:32px;color:var(--navy);line-height:1.1;font-weight:400}
+  .target .t-goal small{font-size:13px;color:var(--ok);font-family:'Geist',sans-serif;font-weight:500;margin-left:4px}
+
+  /* QUICK WINS */
+  .qw-tier{display:flex;align-items:center;gap:14px;margin:32px 0 16px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ok);font-weight:500}
+  .qw-tier::before{content:"";width:32px;height:1px;background:var(--ok)}
+  .qw-tier::after{content:"";flex:1;height:1px;background:var(--line)}
+  .qw-tier.tier2{color:var(--banana-deep)}
+  .qw-tier.tier2::before{background:var(--banana-deep)}
+  .qw-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin-bottom:14px;position:relative}
+  .qw-card.tier1{border-left:4px solid var(--ok)}
+  .qw-card.tier2{border-left:4px solid var(--banana-deep)}
+  .qw-card h3{font-family:'Instrument Serif',serif;font-size:24px;font-weight:400;line-height:1.2;margin:0 0 14px;letter-spacing:-.005em}
+  .qw-card .steps{counter-reset:step;list-style:none;padding:0;margin:14px 0}
+  .qw-card .steps li{counter-increment:step;padding:8px 0 8px 38px;position:relative;color:var(--ink);font-size:14px}
+  .qw-card .steps li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:'Geist Mono',monospace;font-size:10px;color:var(--banana-deep);letter-spacing:.1em;background:var(--paper-2);padding:3px 8px;border-radius:3px}
+  .qw-card .result{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:13.5px}
+  .qw-card .result b{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);font-weight:500;display:block;margin-bottom:4px}
+  .qw-card .result span{color:var(--ink);font-style:italic;font-family:'Instrument Serif',serif;font-size:17px;line-height:1.4}
+
+  /* CALLOUT */
+  .callout{border-radius:10px;padding:20px 24px;margin:16px 0;font-size:14px;border:1px solid;position:relative}
+  .callout.danger{background:var(--danger-bg);border-color:var(--danger);color:#5C1A0F}
+  .callout.warn{background:var(--warn-bg);border-color:var(--banana-deep);color:#5A4012}
+  .callout.info{background:var(--paper-2);border-color:var(--line);color:var(--ink)}
+  .callout-title{font-family:'Geist Mono',monospace;font-weight:500;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+  .callout-title::before{content:"";width:6px;height:6px;background:currentColor;border-radius:999px}
+
+  /* AUDIT BLOCKS */
+  .audit-block{padding:24px 0;border-top:1px solid var(--line-soft)}
+  .audit-block:first-child{border-top:0;padding-top:0}
+  .audit-block .score-line{display:flex;align-items:center;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+  .audit-block .score-line h3{margin:0;font-family:'Instrument Serif',serif;font-size:24px;font-weight:400}
+  .audit-block .score-val{font-family:'Instrument Serif',serif;font-weight:400;color:var(--navy);font-size:24px;font-style:italic}
+  .audit-block .score-val em{color:var(--banana-deep);font-style:italic}
+  .audit-block h4{margin-top:14px;color:var(--banana-deep)}
+
+  /* CHART */
+  .chart-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;margin:14px 0 20px}
+  .chart-card h3{font-family:'Geist Mono',monospace;color:var(--ink-mute);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;font-weight:500}
+  .chart-meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:var(--ink-mute);font-family:'Geist Mono',monospace}
+  .chart-meta span b{color:var(--navy);font-weight:500}
+
+  /* FREINS */
+  .freins{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+  .frein{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;position:relative}
+  .frein .num{font-family:'Instrument Serif',serif;font-size:60px;color:var(--banana);font-style:italic;line-height:.8;margin-bottom:8px;letter-spacing:-.02em}
+  .frein h3{font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;line-height:1.2;margin-bottom:10px}
+  .frein p{color:var(--ink-mute);font-size:13.5px;margin:0}
+  .frein p code{font-size:11px}
+
+  /* OPPORTUNITY */
+  .opp{background:var(--navy);color:var(--paper);border-radius:14px;padding:36px 40px;margin:24px 0;display:flex;align-items:center;gap:36px;position:relative;overflow:hidden}
+  .opp::after{content:"";position:absolute;right:-40px;bottom:-40px;width:200px;height:200px;background:radial-gradient(circle,var(--banana) 0%,transparent 70%);opacity:.25}
+  .opp .label{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.24em;color:var(--banana);text-transform:uppercase;margin-bottom:8px}
+  .opp .num{font-family:'Instrument Serif',serif;font-size:80px;font-weight:400;line-height:1;color:var(--banana);font-style:italic;letter-spacing:-.03em}
+  .opp .num small{font-size:18px;color:var(--paper);font-style:normal;font-family:'Geist',sans-serif;letter-spacing:.04em}
+  .opp .text{flex:1}
+  .opp .text h3{color:var(--paper);font-family:'Instrument Serif',serif;font-size:28px;font-weight:400;margin-bottom:8px}
+  .opp .text p{color:rgba(255,255,255,.75);font-size:14px;margin:0}
+
+  /* CONTINU SECTION */
+  .continu{background:var(--navy);color:var(--paper);border-radius:20px;padding:56px 48px;margin-top:64px;position:relative;overflow:hidden}
+  .continu::before{content:"";position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,var(--banana-soft) 0%,transparent 60%);opacity:.12;pointer-events:none}
+  .continu h2{color:var(--paper);font-family:'Instrument Serif',serif;font-size:44px;line-height:1.05;max-width:720px}
+  .continu h2 i{color:var(--banana);font-style:italic}
+  .continu .pitch{color:rgba(255,255,255,.8);font-size:16px;max-width:680px;margin-bottom:32px;font-family:'Instrument Serif',serif;font-style:italic;line-height:1.5;font-size:20px}
+  .continu table{background:transparent;border:1px solid rgba(255,255,255,.18);border-radius:10px}
+  .continu thead th{background:rgba(255,255,255,.06);color:var(--banana);border-bottom:1px solid rgba(255,217,61,.3)}
+  .continu tbody td{border-bottom:1px solid rgba(255,255,255,.08);color:var(--paper)}
+  .continu tbody tr:hover{background:rgba(255,255,255,.04)}
+  .continu td b{color:var(--banana)}
+  .continu td.muted{color:rgba(255,255,255,.5)}
+  .cta{display:inline-flex;align-items:center;gap:14px;margin-top:28px;padding:18px 32px;background:var(--banana);color:var(--navy);text-decoration:none;font-family:'Geist',sans-serif;letter-spacing:.04em;font-size:14px;font-weight:600;border-radius:8px;transition:transform .15s ease}
+  .cta:hover{transform:translateY(-1px)}
+  .cta::after{content:"→";font-family:'Instrument Serif',serif;font-size:20px;font-style:italic}
+
+  /* TOC */
+  .toc{position:sticky;top:0;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line);margin:0 -32px;z-index:10;font-family:'Geist Mono',monospace;font-size:11px}
+  .toc-inner{max-width:1120px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap}
+  .toc-inner .bn-mark{font-size:14px;flex-shrink:0;margin-right:14px}
+  .toc-inner .bn-mark em{font-size:11px}
+  .toc-inner a{color:var(--ink-mute);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;flex-shrink:0;border:none}
+  .toc-inner a:hover{color:var(--navy)}
+  .toc-inner a.active{color:var(--navy);border-bottom:2px solid var(--banana);padding-bottom:2px}
+
+  /* FOOTER */
+  footer{text-align:left;padding:48px 0 20px;margin-top:64px;border-top:1px solid var(--line);color:var(--ink-mute);font-size:12px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+  footer .left h4{font-family:'Instrument Serif',serif;font-size:24px;font-style:italic;color:var(--navy);font-weight:400;letter-spacing:0;text-transform:none;margin-bottom:6px}
+  footer .right{font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;text-align:right;line-height:1.8}
+
+  /* RESPONSIVE */
+  @media (max-width:920px){
+    .kpi-grid{grid-template-columns:repeat(2,1fr)}
+    .target-grid,.freins,.dim-grid{grid-template-columns:1fr 1fr}
+    .score-hero{grid-template-columns:1fr}
+    .hero-meta{grid-template-columns:repeat(2,1fr);gap:14px}
+    .hero-meta div{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:10px}
+    h1{font-size:42px}
+    h2{font-size:30px}
+    .opp{flex-direction:column;align-items:flex-start;text-align:left}
+    .opp .num{font-size:56px}
+  }
+  @media (max-width:640px){
+    html,body{font-size:14px}
+    .page{padding:0 18px 64px}
+    h1{font-size:32px;line-height:1.05}
+    h2{font-size:24px;line-height:1.15}
+    h3{font-size:16px}
+    p{margin:0 0 10px}
+    ul,ol{padding-left:18px}
+    .hero{margin:0 -18px 36px;padding:28px 20px 56px;border-radius:0 0 18px 18px}
+    .hero-top{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:36px;padding-bottom:14px}
+    .hero-top .meta-tag{font-size:10px}
+    .hero .kicker{font-size:10px;margin-bottom:16px;letter-spacing:.18em}
+    .hero-meta{grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;padding-top:18px}
+    .hero-meta div{padding-right:0;padding-bottom:14px}
+    .hero-meta .val{font-size:18px}
+    .hero-meta .val small{font-size:11px}
+    .hero-engagement{padding:14px 16px;font-size:13px;margin-top:24px}
+    section{margin:48px 0}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:6px;padding-bottom:14px;margin-bottom:12px}
+    .sec-num{padding-top:0;font-size:10px}
+    .sec-lead{font-size:16px;margin:10px 0 20px}
+    .card{padding:20px 18px;border-radius:10px}
+    .card-title{font-size:10px;letter-spacing:.14em}
+    /* TOC */
+    .toc{padding:10px 0;margin:0 -18px}
+    .toc-inner{padding:0 18px;gap:10px;font-size:10px;-webkit-overflow-scrolling:touch}
+    .toc-inner .bn-mark{display:none}
+    .toc-inner a{font-size:10px;letter-spacing:.08em}
+    /* SCORE */
+    .score-hero{margin:18px 0;border-radius:12px}
+    .score-hero .left{padding:32px 24px}
+    .score-hero .left::before{width:40px;height:40px;top:18px;right:18px}
+    .score-hero .left::after{width:22px;height:22px;top:27px;right:27px}
+    .score-hero .num{font-size:120px}
+    .score-hero .num em{font-size:32px;margin-bottom:10px}
+    .score-hero .label{font-size:10px;margin-bottom:18px;letter-spacing:.18em}
+    .score-hero .palier{font-size:10px;letter-spacing:.18em}
+    .score-hero .right{padding:26px 22px}
+    .score-hero .right h3{font-size:22px}
+    .score-hero .right p{font-size:13.5px}
+    /* DIMS */
+    .dim-grid{grid-template-columns:1fr 1fr;gap:8px}
+    .dim{padding:14px 12px}
+    .dim .lbl{font-size:9px}
+    .dim .val{font-size:24px}
+    /* KPI */
+    .kpi-grid{grid-template-columns:1fr 1fr;gap:8px}
+    .kpi{padding:16px 16px}
+    .kpi .k-label{font-size:9.5px;letter-spacing:.16em}
+    /* TARGETS / FREINS */
+    .target-grid,.freins{grid-template-columns:1fr;gap:10px}
+    .frein{padding:20px 18px}
+    .frein .num{font-size:48px}
+    /* OPP block */
+    .opp{padding:22px 18px}
+    .opp .num{font-size:44px}
+    /* TABLES — switch to scroll */
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px}
+    .table-wrap table{font-size:12.5px;min-width:520px}
+    thead th{font-size:9.5px;padding:10px 12px;letter-spacing:.12em}
+    tbody td{padding:10px 12px}
+    td.url{font-size:11.5px}
+    /* Hide TOC active hover noise */
+    code,.mono{font-size:.84em}
+    /* CTA */
+    .cta{padding:14px 22px;font-size:13px}
+    /* CONTINU upsell footer 3-col → 1-col handled inline below */
+    footer{grid-template-columns:1fr;text-align:left;gap:14px;padding:32px 0 16px;margin-top:40px}
+    footer .right{text-align:left;font-size:9.5px}
+    footer .left h4{font-size:20px}
+    /* Section 16 inline 3-col grid */
+    section.continu [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important;gap:20px!important}
+    section.continu{padding:32px 22px!important}
+    /* SVG charts */
+    svg{max-width:100%;height:auto}
+  }
+  @media print{
+    html,body{background:#fff;color:#000}
+    .toc{display:none}
+    section{break-inside:avoid}
+    .qw-card,.kpi,.target,.card,.frein{break-inside:avoid}
+    .hero,.continu,.opp,.score-hero .left{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOC -->
+<nav class="toc">
+  <div class="toc-inner">
+    <span class="bn-mark"><span class="dot"></span>Banana Navy <em>·&nbsp;Audit Spit'Up</em></span>
+    <a href="#synthese">01 Synthèse</a>
+    <a href="#score">02 Score</a>
+    <a href="#domaines">03 Domaines</a>
+    <a href="#gsc">04 Data GSC</a>
+    <a href="#technique">05 Technique</a>
+    <a href="#fondamentaux">06 Fondamentaux</a>
+    <a href="#geo">07 GEO/AI</a>
+    <a href="#wins">08 Quick Wins</a>
+    <a href="#automation">09 Automation</a>
+    <a href="#roadmap">10 Roadmap</a>
+    <a href="#strategie">11 Stratégie</a>
+    <a href="#stack">12 Stack</a>
+    <a href="#kpi">14 KPI</a>
+    <a href="#continu">16 Continu</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-top">
+    <span class="bn-mark" style="margin: 15px"><span class="dot"></span>Banana Navy<em>· strategy &amp; AI agents</em></span>
+    <span class="meta-tag" style="margin: 0px 1px 0px 0px">Confidentiel · v1.0 · 22.04.2026</span>
+  </div>
+  <div class="kicker" style="margin: 0px 0px 24px 1px">Audit Stratégique SEO &amp; GEO — Horizon 2026</div>
+  <h1 style="margin: 0px 0px 0px 1px">Spit'Up Call Solutions —<br/>plan d'action <i>personnalisé</i> pour la visibilité organique &amp; l'AI Search.</h1>
+
+  <div class="hero-engagement" style="margin: 36px 0px 0px 1px">
+    <b>Note d'engagement.</b> Cet audit n'est pas un scan automatique. C'est un plan d'action sur-mesure, croisant données Google Search Console, scan technique manuel et lecture éditoriale des 16 pages stratégiques de spitup.be — assorti de séquences d'exécution chiffrées.
+  </div>
+
+  <div class="hero-meta" style="margin: 56px 0px 0px 1px">
+    <div>
+      <div class="label">Préparé pour</div>
+      <div class="val">Spit'Up Call Solutions<small>Vincent Sancinito · CEO</small></div>
+    </div>
+    <div>
+      <div class="label">Préparé par</div>
+      <div class="val">Banana Navy<small>Strategy &amp; AI agents</small></div>
+    </div>
+    <div>
+      <div class="label">Période données</div>
+      <div class="val">28 jours<small>+ tendance 90j (17.01 → 16.04)</small></div>
+    </div>
+    <div>
+      <div class="label">Date du rapport</div>
+      <div class="val">22 avril 2026<small>v1.0 — édition complète</small></div>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+
+<!-- 1. SYNTHÈSE -->
+<section id="synthese">
+  <div class="sec-head">
+    <span class="sec-num">01 / 16</span>
+    <h2>Synthèse exécutive</h2>
+  </div>
+  <p class="sec-lead">Le constat, les trois freins majeurs et l'opportunité immédiate, en deux minutes de lecture.</p>
+
+  <div class="card">
+    <h4>Le constat</h4>
+    <p>Spit'Up est un acteur établi du télésecrétariat médical et professionnel en Belgique. Le site repose sur une base éditoriale solide, un catalogue de services structuré (MediVoice, ProAssist, ProspectPro, AdminUp, AlexIA, Agenda) et un blog actif de plus de 12 articles. Les fondamentaux techniques sont en place (WordPress + Elementor + WP Rocket, Google Analytics, HTTPS) et les robots d'IA (GPTBot, PerplexityBot) ne sont pas bloqués — Spit'Up est donc déjà indexable par ChatGPT et Perplexity.</p>
+    <p>Sur 28 jours glissants, le site totalise <b>640 clics</b> pour <b>60&nbsp;780 impressions</b>, soit un CTR moyen de <b>1,05&nbsp;%</b> à une position moyenne de <b>10,5</b>. Pour une position à deux chiffres, le CTR attendu se situe plutôt autour de <b>2 à 3&nbsp;%</b> : le trafic capturé est donc <b>sous son potentiel d'un facteur 2 à 3</b>, sans produire un seul article de plus.</p>
+  </div>
+
+  <h4 style="margin-top:32px">Trois freins majeurs</h4>
+  <div class="freins">
+    <div class="frein">
+      <div class="num">01</div>
+      <h3>Balisage structuré minimaliste</h3>
+      <p>Seules les entités <em>Organization</em>, <em>WebSite</em> et une <em>FAQPage</em> unique sont présentes. Aucune fiche d'entreprise locale, aucune note moyenne structurée. Google et les moteurs d'IA ne disposent d'aucune fiche entité consolidée pour représenter Spit'Up.</p>
+    </div>
+    <div class="frein">
+      <div class="num">02</div>
+      <h3>Cannibalisation Progenda</h3>
+      <p>Deux pages se disputent le même mot-clé à 8&nbsp;003 impressions/mois — en position moyenne 6,7 avec un CTR ridicule de <b>0,12&nbsp;%</b>. Autorité fragmentée, rien qui capte.</p>
+    </div>
+    <div class="frein">
+      <div class="num">03</div>
+      <h3>Preuve sociale non structurée</h3>
+      <p>Les témoignages clients existent en HTML mais ne sont pas balisés en avis structurés ni en note agrégée. La note interne revendiquée (<b>4,9/5</b>) n'alimente ni les étoiles dans les résultats Google, ni les AI Overviews.</p>
+    </div>
+  </div>
+
+  <div class="opp">
+    <div>
+      <div class="label">Opportunité immédiate</div>
+      <div class="num">+400<small>&nbsp;clics/mois</small></div>
+    </div>
+    <div class="text">
+      <h3>Sans produire un seul article supplémentaire.</h3>
+      <p>Consolider la cannibalisation Progenda, réécrire les titres du top 20 et déployer le balisage entité locale suffit à rattraper l'écart entre CTR observé (1,05&nbsp;%) et CTR attendu (2–3&nbsp;%) à position 10. La rampe est en place — il manque la couche sémantique et la discipline d'exécution.</p>
+    </div>
+  </div>
+
+  <h4 style="margin-top:32px">Trois atouts à amplifier</h4>
+  <ul>
+    <li>Densité du blog et qualité éditoriale (score <b>9/10</b>) — <code>/compte-rendu-medical</code> draine 144 clics/mois à CTR 1,59&nbsp;%, <code>/jobs-telesecretariat</code> convertit à <b>5,80&nbsp;%</b>.</li>
+    <li>Page <em>AlexIA</em> avec FAQ structurée — actif directement réplicable sur les autres lignes de service (MediVoice, ProAssist, Agenda).</li>
+    <li>Ancrage tarifaire transparent (« à partir de 129&nbsp;€/mois ») et engagement réponse sous 24h — deux signaux E-E-A-T forts à amplifier dans le balisage.</li>
+  </ul>
+</section>
+
+<!-- 2. SCORE -->
+<section id="score">
+  <div class="sec-head">
+    <span class="sec-num">02 / 16</span>
+    <h2>Score de préparation SEO &amp; GEO</h2>
+  </div>
+  <p class="sec-lead">Note consolidée sur 5 dimensions : assets de données, stack technique, bibliothèque de contenu, maturité opérationnelle et urgence AI Search.</p>
+
+  <div class="score-hero">
+    <div class="left">
+      <div class="label">Préparation SEO + GEO (AI Search)</div>
+      <div class="num">43<em>/100</em></div>
+      <div class="palier">Palier · Growing</div>
+    </div>
+    <div class="right">
+      <h3>Le socle technique et éditorial est <i style="color:var(--banana-deep);font-style:italic;font-family:'Instrument Serif',serif">suffisant</i> pour déployer des automatisations dès 30 jours.</h3>
+      <p>À condition de traiter le chantier balisage structuré en priorité absolue. La marge de progression la plus rapide se situe sur <b>Operational Maturity</b> (4/20) et <b>Data Assets</b> (7/20) — deux dimensions qui débloquent mécaniquement le reste du score une fois le socle entité locale déployé.</p>
+    </div>
+  </div>
+
+  <div class="dim-grid">
+    <div class="dim"><div class="lbl">Data Assets</div><div class="val">7<em>/20</em></div><div class="bar"><i style="width:35%"></i></div></div>
+    <div class="dim"><div class="lbl">Tech Stack</div><div class="val">11<em>/20</em></div><div class="bar"><i style="width:55%"></i></div></div>
+    <div class="dim"><div class="lbl">Content Library</div><div class="val">13<em>/20</em></div><div class="bar"><i style="width:65%"></i></div></div>
+    <div class="dim"><div class="lbl">Operational Maturity</div><div class="val">4<em>/20</em></div><div class="bar"><i style="width:20%"></i></div></div>
+    <div class="dim"><div class="lbl">AI Urgency</div><div class="val">8<em>/20</em></div><div class="bar"><i style="width:40%"></i></div></div>
+  </div>
+
+  <div class="table-wrap" style="margin-top:24px">
+    <table>
+      <thead><tr><th>Dimension</th><th class="num">Score</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td>Data Assets</td><td class="num">7/20</td><td>GA actif, blog fourni&nbsp;; CRM et plateforme email à confirmer côté front-end&nbsp;; balisage structuré absent</td></tr>
+        <tr><td>Tech Stack Compatibility</td><td class="num">11/20</td><td>WordPress + Elementor = compatible avec 90&nbsp;% des outils IA&nbsp;; plateforme email et CRM à valider</td></tr>
+        <tr><td>Content Library</td><td class="num">13/20</td><td>Blog + 16 pages service&nbsp;; manque FAQ multi-pages et lead magnets</td></tr>
+        <tr><td>Operational Maturity</td><td class="num">4/20</td><td>Présence multi-canal, mais pas de widget chat ni de gestion d'avis structurée visibles</td></tr>
+        <tr><td>AI Urgency</td><td class="num">8/20</td><td>Plusieurs chantiers à lancer (email, CRM) — fenêtre favorable pour bouger en 90 jours</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 3. DOMAINES -->
+<section id="domaines">
+  <div class="sec-head">
+    <span class="sec-num">03 / 16</span>
+    <h2>Scores globaux par domaine</h2>
+  </div>
+  <p class="sec-lead">Vue d'ensemble des 14 domaines audités sur le périmètre SEO organique + GEO (AI Search), classés par priorité d'intervention.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Domaine</th><th class="num">Score /10</th><th>Statut</th><th>Priorité</th></tr></thead>
+      <tbody>
+        <tr><td><b>Schema local</b></td><td class="num">1/10</td><td style="color:var(--danger)">Critique</td><td><span class="pri critique">Critique</span></td></tr>
+        <tr><td>Citations &amp; annuaires</td><td class="num">2/10</td><td>Faible</td><td><span class="pri haute">Haute</span></td></tr>
+        <tr><td>Email marketing</td><td class="num">2/10</td><td>Non vérifié</td><td><span class="pri confirmer">À confirmer</span></td></tr>
+        <tr><td>Contenu local</td><td class="num">3/10</td><td>Faible</td><td><span class="pri haute">Haute</span></td></tr>
+        <tr><td>Signaux de confiance</td><td class="num">5/10</td><td>À renforcer</td><td><span class="pri haute">Haute</span></td></tr>
+        <tr><td>Visibilité IA (AEO + GEO)</td><td class="num">6/10</td><td>Moyen</td><td><span class="pri haute">Haute</span></td></tr>
+        <tr><td>Couverture FAQ</td><td class="num">6/10</td><td>Moyen</td><td><span class="pri haute">Haute</span></td></tr>
+        <tr><td>Google Business Profile</td><td class="num">6/10</td><td>Correct</td><td><span class="pri moyenne">Moyenne</span></td></tr>
+        <tr><td>Cohérence NAP</td><td class="num">6/10</td><td>Correct</td><td><span class="pri moyenne">Moyenne</span></td></tr>
+        <tr><td>SEO Fondamentaux</td><td class="num">7/10</td><td>Correct</td><td><span class="pri moyenne">Moyenne</span></td></tr>
+        <tr><td>Parcours de conversion</td><td class="num">7/10</td><td>Correct</td><td><span class="pri moyenne">Moyenne</span></td></tr>
+        <tr><td>Mobile &amp; vitesse</td><td class="num">7/10</td><td>Correct</td><td><span class="pri moyenne">Moyenne</span></td></tr>
+        <tr><td>Qualité de contenu</td><td class="num">9/10</td><td style="color:var(--ok)">Excellent</td><td><span class="pri maintenir">Maintenir</span></td></tr>
+        <tr><td>Blog &amp; content marketing</td><td class="num">9/10</td><td style="color:var(--ok)">Excellent</td><td><span class="pri maintenir">Maintenir</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 4. GSC -->
+<section id="gsc">
+  <div class="sec-head">
+    <span class="sec-num">04 / 16</span>
+    <h2>Performance organique — preuve par la donnée</h2>
+  </div>
+  <p class="sec-lead">Chiffres réels issus de la propriété spitup.be. Période principale : 28 derniers jours. Comparaison tendance : 17 janvier → 16 avril 2026 (90 jours glissants).</p>
+
+  <h4 style="margin-top:24px">4.1 · Vue 28 jours</h4>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="k-label">Clics</div><div class="k-value">640</div><div class="k-sub">≈ 22,8 clics/jour</div></div>
+    <div class="kpi"><div class="k-label">Impressions</div><div class="k-value">60&nbsp;780</div><div class="k-sub">≈ 2&nbsp;171 /jour</div></div>
+    <div class="kpi"><div class="k-label">CTR moyen</div><div class="k-value">1,05<span class="k-unit">%</span></div><div class="k-sub">Attendu pos. 10 : 2–3&nbsp;%</div></div>
+    <div class="kpi"><div class="k-label">Position moy.</div><div class="k-value">10,5</div><div class="k-sub">50+ pages indexées</div></div>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">Lecture</div>
+    À 10,5 de position moyenne, le CTR attendu se situe entre 2 et 3&nbsp;%. Un CTR observé à 1,05&nbsp;% signifie que les titres et meta descriptions ne transforment pas l'impression en clic. <b>Optimiser les titres du top 20 des pages, c'est +200 à +350 clics/mois sans produire un octet de contenu supplémentaire.</b>
+  </div>
+
+  <h4 style="margin-top:36px">4.2 · Tendance 90 jours (17/01 → 16/04/2026)</h4>
+  <div class="chart-card">
+    <h3>Clics quotidiens — 90 jours</h3>
+    <svg viewBox="0 0 900 200" width="100%" height="200" role="img" aria-label="Courbe des clics quotidiens sur 90 jours">
+      <defs>
+        <linearGradient id="bnFade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFD93D" stop-opacity=".45"/>
+          <stop offset="100%" stop-color="#FFD93D" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <line x1="40" y1="170" x2="880" y2="170" stroke="#D8D2BE" stroke-width="1"/>
+      <line x1="40" y1="105" x2="880" y2="105" stroke="#D8D2BE" stroke-width="1" stroke-dasharray="3 4"/>
+      <text x="46" y="100" fill="#4A5A75" font-size="10" font-family="Geist Mono">moyenne 28,6 clics/j</text>
+      <path d="M40,40 L52,50 L64,65 L78,82 L92,90 L108,86 L124,98 L140,102 L156,94 L172,106 L188,120 L206,128 L224,138 L242,132 L262,124 L282,118 L300,128 L320,140 L340,146 L360,152 L380,138 L402,128 L424,122 L446,130 L468,144 L490,148 L512,152 L532,156 L552,154 L572,146 L592,138 L612,132 L632,126 L652,132 L672,128 L692,120 L712,114 L732,110 L752,106 L772,112 L792,116 L812,110 L832,104 L852,100 L872,106 L880,102" fill="none" stroke="#0A1F3D" stroke-width="2"/>
+      <path d="M40,40 L52,50 L64,65 L78,82 L92,90 L108,86 L124,98 L140,102 L156,94 L172,106 L188,120 L206,128 L224,138 L242,132 L262,124 L282,118 L300,128 L320,140 L340,146 L360,152 L380,138 L402,128 L424,122 L446,130 L468,144 L490,148 L512,152 L532,156 L552,154 L572,146 L592,138 L612,132 L632,126 L652,132 L672,128 L692,120 L712,114 L732,110 L752,106 L772,112 L792,116 L812,110 L832,104 L852,100 L872,106 L880,102 L880,170 L40,170 Z" fill="url(#bnFade)"/>
+      <circle cx="40" cy="40" r="5" fill="#FFD93D" stroke="#0A1F3D" stroke-width="1.5"/>
+      <text x="50" y="34" fill="#0A1F3D" font-size="11" font-family="Geist" font-weight="600">Pic 53 clics · 19/01</text>
+      <circle cx="552" cy="154" r="5" fill="#B83A26" stroke="#fff" stroke-width="1.5"/>
+      <text x="458" y="180" fill="#B83A26" font-size="11" font-family="Geist" font-weight="600">Creux 8 clics · 21/03</text>
+      <text x="40" y="194" fill="#4A5A75" font-size="10" font-family="Geist Mono">17/01</text>
+      <text x="440" y="194" fill="#4A5A75" font-size="10" font-family="Geist Mono" text-anchor="middle">17/02</text>
+      <text x="700" y="194" fill="#4A5A75" font-size="10" font-family="Geist Mono" text-anchor="middle">17/03</text>
+      <text x="880" y="194" fill="#4A5A75" font-size="10" font-family="Geist Mono" text-anchor="end">16/04</text>
+    </svg>
+    <div class="chart-meta">
+      <span>Clics cumulés <b>2&nbsp;573</b></span>
+      <span>Impressions <b>236&nbsp;278</b></span>
+      <span>CTR moyen <b>1,09&nbsp;%</b></span>
+      <span>Position moy. <b>12,0</b></span>
+      <span>Moyenne /jour <b>28,6</b></span>
+    </div>
+  </div>
+
+  <h4 style="margin-top:36px">4.3 · Analyse par device — anomalie critique</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Device</th><th class="num">Clics</th><th class="num">Impressions</th><th class="num">CTR</th><th class="num">Position</th></tr></thead>
+      <tbody>
+        <tr><td>Mobile</td><td class="num">335</td><td class="num">27&nbsp;458</td><td class="num">1,22&nbsp;%</td><td class="num" style="color:var(--ok)"><b>7,1</b></td></tr>
+        <tr><td>Desktop</td><td class="num">297</td><td class="num">32&nbsp;737</td><td class="num">0,91&nbsp;%</td><td class="num" style="color:var(--danger)"><b>13,5</b></td></tr>
+        <tr><td>Tablet</td><td class="num">8</td><td class="num">851</td><td class="num">1,37&nbsp;%</td><td class="num">7,5</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout danger">
+    <div class="callout-title">Anomalie · écart desktop / mobile</div>
+    Desktop en position <b>13,5</b> contre mobile à <b>7,1</b>&nbsp;: un écart de <b>6,4 positions</b> sur le même site est anormal. Causes probables&nbsp;: Core Web Vitals desktop dégradés, contenu masqué à un format d'écran, ou compétition SERP plus forte en desktop. À investiguer en priorité — c'est le levier le plus rapide pour rattraper les ~220 clics/mois que la version desktop ne capte pas.
+  </div>
+
+  <h4 style="margin-top:36px">4.4 · Top 10 pages par performance</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Page</th><th class="num">Clics</th><th class="num">Impressions</th><th class="num">CTR</th><th class="num">Position</th></tr></thead>
+      <tbody>
+        <tr><td class="url">/compte-rendu-medical-comment-le-rediger-rapidement/</td><td class="num">144</td><td class="num">9&nbsp;075</td><td class="num">1,59&nbsp;%</td><td class="num">6,1</td></tr>
+        <tr><td class="url">/3-exemples-de-message-pour-son-repondeur-de-cabinet-medical/</td><td class="num">100</td><td class="num">6&nbsp;536</td><td class="num">1,53&nbsp;%</td><td class="num">11,8</td></tr>
+        <tr><td class="url">/jobs-telesecretariat/</td><td class="num">97</td><td class="num">1&nbsp;671</td><td class="num" style="color:var(--ok)"><b>5,80&nbsp;%</b></td><td class="num">16,0</td></tr>
+        <tr><td class="url">/ <em>(accueil)</em></td><td class="num">71</td><td class="num">2&nbsp;687</td><td class="num">2,64&nbsp;%</td><td class="num">7,1</td></tr>
+        <tr><td class="url">/comment-classer-les-documents-administratifs-dune-entreprise/</td><td class="num">67</td><td class="num">6&nbsp;467</td><td class="num">1,04&nbsp;%</td><td class="num">10,2</td></tr>
+        <tr><td class="url">/progenda-agenda-en-ligne/</td><td class="num">17</td><td class="num">6&nbsp;745</td><td class="num" style="color:var(--danger)">0,25&nbsp;%</td><td class="num">7,2</td></tr>
+        <tr><td class="url">/rendez-vous-medicaux-non-honores-comment-les-eviter/</td><td class="num">17</td><td class="num">1&nbsp;905</td><td class="num">0,89&nbsp;%</td><td class="num">6,0</td></tr>
+        <tr><td class="url">/adminup-support-administratif-entreprises/</td><td class="num">15</td><td class="num">728</td><td class="num">2,06&nbsp;%</td><td class="num">12,1</td></tr>
+        <tr><td class="url">/comment-se-connecter-a-progenda-le-guide-complet/</td><td class="num">13</td><td class="num">4&nbsp;510</td><td class="num" style="color:var(--danger)">0,29&nbsp;%</td><td class="num">4,4</td></tr>
+        <tr><td class="url">/progenda-agenda-en-ligne-en-2026/</td><td class="num">10</td><td class="num">4&nbsp;732</td><td class="num" style="color:var(--danger)">0,21&nbsp;%</td><td class="num">6,2</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 style="margin-top:36px">4.5 · Pages à fort potentiel (enterrées)</h4>
+  <p class="table-cap">10 pages à 600+ impressions mensuelles qui ne captent quasiment rien — positions 15 à 40.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Page</th><th class="num">Impressions</th><th class="num">Position</th><th class="num">Clics</th></tr></thead>
+      <tbody>
+        <tr><td class="url">/lexternalisation-administrative-avantages-et-organisation/</td><td class="num">1&nbsp;598</td><td class="num">38,6</td><td class="num">1</td></tr>
+        <tr><td class="url">/10-phrases-daccroche-commerciale-pour-mieux-convertir/</td><td class="num">1&nbsp;251</td><td class="num">15,7</td><td class="num">0</td></tr>
+        <tr><td class="url">/medivoice-telesecretariat-medical/</td><td class="num">1&nbsp;184</td><td class="num">23,3</td><td class="num">5</td></tr>
+        <tr><td class="url">/quels-sont-les-tarifs-dun-telesecretariat-medical/</td><td class="num">1&nbsp;050</td><td class="num">26,5</td><td class="num">5</td></tr>
+        <tr><td class="url">/secretariat-medical-a-distance-role-mission-et-avantages/</td><td class="num">912</td><td class="num">39,4</td><td class="num">2</td></tr>
+        <tr><td class="url">/wz-agenda-solutions-logicielles-de-prise-de-rendez-vous/</td><td class="num">886</td><td class="num">7,6</td><td class="num">1</td></tr>
+        <tr><td class="url">/prospection-telephonique-8-bonnes-pratiques-pour-convertir/</td><td class="num">778</td><td class="num">18,4</td><td class="num">1</td></tr>
+        <tr><td class="url">/une-assistance-administrative-externalisee-avec-spitup/</td><td class="num">668</td><td class="num">34,6</td><td class="num">1</td></tr>
+        <tr><td class="url">/proassist-telesecretariat-pour-entreprises/</td><td class="num">623</td><td class="num">30,4</td><td class="num">2</td></tr>
+        <tr><td class="url">/comment-soigner-son-accueil-telephonique-medical/</td><td class="num">603</td><td class="num">27,3</td><td class="num">4</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 style="margin-top:36px">4.6 · Top 10 mots-clés — focus Progenda</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Requête</th><th class="num">Clics</th><th class="num">Impressions</th><th class="num">CTR</th><th class="num">Position</th></tr></thead>
+      <tbody>
+        <tr><td>spitup</td><td class="num">24</td><td class="num">41</td><td class="num">58,5&nbsp;%</td><td class="num">1,3</td></tr>
+        <tr><td>spit up</td><td class="num">11</td><td class="num">47</td><td class="num">23,4&nbsp;%</td><td class="num">1,8</td></tr>
+        <tr><td>compte rendu médical</td><td class="num">10</td><td class="num">707</td><td class="num">1,4&nbsp;%</td><td class="num">8,0</td></tr>
+        <tr style="background:#FBEBE6"><td><b>progenda</b></td><td class="num">10</td><td class="num"><b>8&nbsp;003</b></td><td class="num" style="color:var(--danger)"><b>0,12&nbsp;%</b></td><td class="num">6,7</td></tr>
+        <tr><td>emploi secrétaire médicale cabinet privé</td><td class="num">9</td><td class="num">146</td><td class="num">6,2&nbsp;%</td><td class="num">7,6</td></tr>
+        <tr><td>spitup call solutions</td><td class="num">8</td><td class="num">16</td><td class="num">50,0&nbsp;%</td><td class="num">1,0</td></tr>
+        <tr><td>progenda connexion</td><td class="num">7</td><td class="num">3&nbsp;581</td><td class="num" style="color:var(--danger)">0,2&nbsp;%</td><td class="num">4,2</td></tr>
+        <tr><td>télésecrétariat médical emploi</td><td class="num">7</td><td class="num">21</td><td class="num">33,3&nbsp;%</td><td class="num">2,3</td></tr>
+        <tr><td>comment classer les documents administratifs</td><td class="num">5</td><td class="num">151</td><td class="num">3,3&nbsp;%</td><td class="num">1,5</td></tr>
+        <tr><td>compte rendu medical</td><td class="num">4</td><td class="num">128</td><td class="num">3,1&nbsp;%</td><td class="num">4,8</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout warn">
+    <div class="callout-title">Étude de cas · le mot-clé « progenda »</div>
+    <b>8&nbsp;003 impressions mensuelles</b>, position 6,7 — et pourtant seulement <b>10 clics</b>. Le CTR attendu à cette position est de 4 à 6&nbsp;%&nbsp;: on devrait capter 320 à 480 clics. L'autorité est fragmentée sur deux URL concurrentes et les titres ne convertissent pas. <b>Ce seul chantier représente ≈ 400 clics/mois de rattrapage.</b>
+  </div>
+</section>
+
+<!-- 5. TECHNIQUE -->
+<section id="technique">
+  <div class="sec-head">
+    <span class="sec-num">05 / 16</span>
+    <h2>Problèmes techniques identifiés</h2>
+  </div>
+  <p class="sec-lead">Six chantiers techniques classés par sévérité. Chacun chiffré en impact mensuel.</p>
+
+  <div class="card danger">
+    <div class="card-title" style="color:var(--danger)">5.1 · Cannibalisation Progenda <span class="pri critique">Critique</span></div>
+    <p>Deux pages se disputent le même mot-clé&nbsp;:</p>
+    <ul>
+      <li><code>/progenda-agenda-en-ligne/</code> — 5&nbsp;604 impressions, position 7,3</li>
+      <li><code>/progenda-agenda-en-ligne-en-2026/</code> — 3&nbsp;662 impressions, position 6,2</li>
+    </ul>
+    <p><b>Impact&nbsp;:</b> autorité fragmentée, Google choisit alternativement l'une ou l'autre, aucune ne capitalise les signaux de clic. <b>Consolidation attendue&nbsp;:</b> position 3–4, CTR ×5 à ×10, soit ≈ 400 clics/mois récupérés.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">5.2 · URL parasites — fragments Elementor</div>
+    <p>Deux URL avec ancre <code>#elementor-toc__heading-anchor-0</code> sont indexées&nbsp;:</p>
+    <ul>
+      <li><code>/compte-rendu-medical.../#elementor-toc__heading-anchor-0</code> — 2&nbsp;143 impressions</li>
+      <li><code>/3-exemples-de-message.../#elementor-toc__heading-anchor-0</code> — 524 impressions</li>
+    </ul>
+    <p><b>Impact&nbsp;:</b> 2&nbsp;667 impressions gaspillées, budget de crawl dilué, autorité qui ne s'agrège pas sur la page canonique. <b>Fix&nbsp;:</b> configuration canonical + exclusion fragments dans le plugin SEO.</p>
+  </div>
+
+  <div class="card warn">
+    <div class="card-title">5.3 · Écart desktop / mobile</div>
+    <p>Écart de <b>6,4 positions</b> entre desktop (13,5) et mobile (7,1) sur la même propriété. Investiguer en priorité&nbsp;: Core Web Vitals desktop (CLS, LCP), contenu caché à certaines largeurs d'écran, ou SERP desktop plus agressive. <b>Gain potentiel&nbsp;: ~220 clics/mois</b> si l'écart est ramené sous 2 positions.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">5.4 · Titres, metas et doublons d'URL</div>
+    <p>Sur les 16 pages auditées&nbsp;:</p>
+    <ul>
+      <li><code>/contact/</code> est un alias complet de <code>/contactez-spitup/</code> — même title, même H1, signal dupliqué.</li>
+      <li>5 pages hors fenêtre 40–60 caractères&nbsp;: Équipe (15 car.), Contactez (66 car.), Agenda (meta 305 car.), Références (34 car.), IA (59 car.).</li>
+      <li>Impact réécriture Google&nbsp;: perte de 15 à 25&nbsp;% de CTR sur les pages concernées.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">5.5 · Mobile, vitesse et CDN</div>
+    <p>WP Rocket est actif (cache + compression), lazy-loading appliqué (27–44 images par page), Elementor mobile OK. Aucun CDN détecté côté front-end — latence évitable pour les visiteurs hors Belgique et pénalité potentielle sur les Core Web Vitals.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">5.6 · Email marketing — à confirmer</div>
+    <p>Aucune plateforme d'email marketing (Brevo, Mailchimp, ActiveCampaign, Klaviyo) identifiée dans les assets publics. Aucun formulaire de capture email simple visible côté front-end. Les 9 formulaires détectés sont exclusivement contact/devis multi-champs. <em>Un autorépondeur peut opérer via API sans être visible au scan — à valider en discovery Banana Navy.</em></p>
+  </div>
+</section>
+
+<!-- 6. FONDAMENTAUX -->
+<section id="fondamentaux">
+  <div class="sec-head">
+    <span class="sec-num">06 / 16</span>
+    <h2>Audit technique SEO — fondamentaux</h2>
+  </div>
+  <p class="sec-lead">Lecture des 5 dimensions qui composent la note SEO Fondamentaux, avec impact opérationnel.</p>
+
+  <div class="card">
+    <div class="audit-block">
+      <div class="score-line"><h3>SEO Fondamentaux</h3><span class="score-val">7<em>/10</em></span><span class="pri moyenne">Moyenne</span></div>
+      <h4>Ce que nous avons trouvé</h4>
+      <p>Les 16 pages auditées ont toutes un title, un H1 et une meta description non vides. Deux pages partagent néanmoins exactement le même title et le même H1 — <code>/contact/</code> est un alias de <code>/contactez-spitup/</code> — et cinq pages sortent de la fenêtre recommandée 40–60 caractères. Sitemap accessible, directives d'indexation non bloquantes.</p>
+      <h4>Pourquoi ça vous coûte</h4>
+      <p>Les URL en doublon diluent le signal SEO entre deux pages concurrentes&nbsp;; les metas hors-format voient Google réécrire ses propres snippets — réduction du CTR de 15 à 25&nbsp;% sur les pages concernées.</p>
+    </div>
+
+    <div class="audit-block">
+      <div class="score-line"><h3>Qualité de contenu</h3><span class="score-val">9<em>/10</em></span><span class="pri maintenir">Maintenir</span></div>
+      <h4>Ce que nous avons trouvé</h4>
+      <p>Chaque ligne de service dispose de sa propre landing (MediVoice, ProAssist, ProspectPro, AdminUp, AlexIA, Agenda) avec structure claire, bénéfices listés, cas d'usage et CTA cohérents. Ancrage tarifaire explicite (« à partir de 129&nbsp;€/mois ») et engagement de réponse sous 24h. Vocabulaire métier précis, proposition de valeur lisible.</p>
+      <h4>Pourquoi c'est un actif</h4>
+      <p>Rien à perdre ici — actif stratégique à capitaliser dans le balisage structuré et la distribution AI Search.</p>
+    </div>
+
+    <div class="audit-block">
+      <div class="score-line"><h3>Parcours de conversion</h3><span class="score-val">7<em>/10</em></span><span class="pri moyenne">Moyenne</span></div>
+      <h4>Ce que nous avons trouvé</h4>
+      <p>Neuf formulaires déployés sur les pages clés, chacun avec 5 à 6 champs (nom, email, téléphone, message, RGPD). CTA orientés action (« Demander votre devis », « Envoyer ma demande »). En revanche, aucun formulaire de capture simple (email seul pour newsletter ou lead magnet), et aucune plateforme email reconnue visible.</p>
+      <h4>Pourquoi ça vous coûte</h4>
+      <p>Sans capture légère, chaque visiteur non prêt à demander un devis repart sans trace — vous perdez la totalité du trafic « en réflexion », typiquement 70 à 85&nbsp;% des visiteurs d'une landing B2B.</p>
+    </div>
+
+    <div class="audit-block">
+      <div class="score-line"><h3>Signaux de confiance</h3><span class="score-val">5<em>/10</em></span><span class="pri haute">Haute</span></div>
+      <h4>Ce que nous avons trouvé</h4>
+      <p>HTTPS actif, politique de confidentialité accessible, téléphone Belgique (071&nbsp;18&nbsp;24&nbsp;73) et email visibles, partenaires professionnels crédibles (SSMG pour Impulseo, SD Worx, Tempo-Team, Mensura, Coface). Témoignages clients en HTML sur plusieurs pages mais non balisés en avis structurés — alors qu'une note moyenne de <b>4,9/5</b> est revendiquée.</p>
+      <h4>Pourquoi ça vous coûte</h4>
+      <p>Une note agrégée non balisée, c'est un étoilé invisible dans les résultats Google, une citation IA (« quelle note a Spit'Up&nbsp;? ») qui ne peut pas répondre, et un rich snippet perdu sur chaque requête marque.</p>
+    </div>
+
+    <div class="audit-block">
+      <div class="score-line"><h3>Blog &amp; content marketing</h3><span class="score-val">9<em>/10</em></span><span class="pri maintenir">Maintenir</span></div>
+      <h4>Ce que nous avons trouvé</h4>
+      <p>Plus de 12 articles récents orientés métier (« L'IA dans l'accueil téléphonique : 5 tendances 2026 », « Agenda médical en ligne », « Cabinets dentaires en Belgique », « Callbots et télésecrétariat »). Intentions informationnelles claires. Les pages du blog ne portent pas encore de balisage <em>Article</em> ou <em>FAQPage</em> structuré.</p>
+      <h4>Pourquoi ça vous coûte</h4>
+      <p>Rien côté trafic — le blog travaille déjà. Côté IA en revanche, des articles non balisés sont extraits moins fidèlement par les moteurs génératifs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. GEO -->
+<section id="geo">
+  <div class="sec-head">
+    <span class="sec-num">07 / 16</span>
+    <h2>Préparation GEO — AI Search</h2>
+  </div>
+  <p class="sec-lead">Capacité du site à apparaître dans les réponses de Google AI Overviews, ChatGPT, Perplexity et Gemini.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Dimension</th><th class="num">Score</th><th>Observation clé</th></tr></thead>
+      <tbody>
+        <tr><td>Google Business Profile</td><td class="num">6/10</td><td>Fiche active, note revendiquée 4,9/5 — à vérifier vs schema</td></tr>
+        <tr><td><b>Schema local</b></td><td class="num" style="color:var(--danger)"><b>1/10</b></td><td>Aucun balisage d'entreprise locale — priorité absolue</td></tr>
+        <tr><td>Cohérence NAP</td><td class="num">6/10</td><td>Nom cohérent, téléphone présent, adresse absente du schema</td></tr>
+        <tr><td>Contenu local</td><td class="num">3/10</td><td>Peu de mentions géographiques dans titres et H1</td></tr>
+        <tr><td>Visibilité IA (AEO + GEO)</td><td class="num">6/10</td><td>FAQ présente + bots IA non bloqués</td></tr>
+        <tr><td>Couverture FAQ</td><td class="num">6/10</td><td>8 Q/R structurées sur une seule page</td></tr>
+        <tr><td>Citations &amp; annuaires</td><td class="num">2/10</td><td>Pas de mention confirmée dans Pages d'Or ou annuaires médicaux</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card danger">
+    <div class="card-title" style="color:var(--danger)">Schema local — 1/10 · priorité absolue</div>
+    <h4>Ce que nous avons trouvé</h4>
+    <p>Le site déclare <em>WebSite</em> et <em>Organization</em>, mais aucune entité d'entreprise locale (<em>LocalBusiness</em>, <em>MedicalBusiness</em> ou <em>ProfessionalService</em>), aucune adresse structurée, aucun téléphone balisé, aucune plage horaire, aucune zone desservie, aucune fourchette tarifaire. Google et les moteurs d'IA ne disposent d'aucun objet « entreprise locale » exploitable pour Spit'Up.</p>
+    <h4>Pourquoi ça vous coûte</h4>
+    <p>Sans entité locale structurée, Spit'Up est exclu mécaniquement du pack local Google Maps et des AI Overviews de type « trouve-moi un télésecrétariat à [ville] ».</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Contenu local — 3/10</div>
+    <h4>Ce que nous avons trouvé</h4>
+    <p>Le site mentionne « Belgique » dans quelques articles, mais le title principal de l'accueil, les sous-titres des pages services et les meta descriptions ne contiennent pas de signal géographique structuré. Aucune landing régionale dédiée (Bruxelles, Liège, Namur, Charleroi, Mons).</p>
+    <h4>Pourquoi ça vous coûte</h4>
+    <p>Un prospect qui tape « permanence téléphonique Liège » voit remonter des cabinets régionaux plutôt que Spit'Up, même si le service est disponible sur tout le territoire.</p>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">Bon signal · robots IA non bloqués</div>
+    Les bots <b>GPTBot</b> (ChatGPT) et <b>PerplexityBot</b> (Perplexity) ne sont pas exclus du <code>robots.txt</code>. Le site est donc déjà <b>indexable par les moteurs génératifs</b>. Il manque principalement la couche sémantique (balisage + FAQ multi-pages) pour que ces moteurs extraient et citent correctement Spit'Up.
+  </div>
+</section>
+
+<!-- 8. QUICK WINS -->
+<section id="wins">
+  <div class="sec-head">
+    <span class="sec-num">08 / 16</span>
+    <h2>Quick Wins prioritaires</h2>
+  </div>
+  <p class="sec-lead">Six actions à fort ratio impact/effort, classées par tier d'exécution. Chaque action est livrée en étape par étape — c'est ici que la valeur du rapport se concrétise.</p>
+
+  <div class="qw-tier">Tier 1 · à faire aujourd'hui — &lt;1h, sans développeur</div>
+
+  <div class="qw-card tier1">
+    <h3>1. Fusionner les deux URL Contact en une seule</h3>
+    <ol class="steps">
+      <li>Ouvrir <code>/contactez-spitup/</code> et <code>/contact/</code>&nbsp;; identifier l'URL historique (la plus ancienne).</li>
+      <li>Conserver <code>/contactez-spitup/</code> et mettre <code>/contact/</code> en redirection 301 via Redirection (gratuit) ou Rank Math.</li>
+      <li>Tester l'ancienne URL en navigation privée, elle doit rediriger.</li>
+    </ol>
+    <div class="result"><b>Résultat attendu</b><span>Jus SEO concentré sur une seule page, fin du risque de contenu dupliqué signalé par Google.</span></div>
+  </div>
+
+  <div class="qw-card tier1">
+    <h3>2. Corriger les 5 titles et metas hors-fenêtre</h3>
+    <ol class="steps">
+      <li>Ouvrir les pages Équipe (15 car.), Contactez (66 car.), IA (59 — ok), Agenda (meta 305 car.), Références (34 car.).</li>
+      <li>Réécrire chaque title au format « [Service/section] | Spit'Up télésecrétariat [qualificatif] », viser 50–58 caractères.</li>
+      <li>Réécrire les metas en 140–155 caractères, avec verbe d'action et promesse.</li>
+    </ol>
+    <div class="result"><b>Résultat attendu</b><span>+15 à 25&nbsp;% de CTR sur les pages concernées, signal positif immédiat pour les moteurs.</span></div>
+  </div>
+
+  <div class="qw-tier tier2">Tier 2 · à faire cette semaine — 1 à 4h, dev. ou rédacteur</div>
+
+  <div class="qw-card tier2">
+    <h3>3. Fusionner les 2 pages Progenda + réécrire le top 20 titles/metas</h3>
+    <ol class="steps">
+      <li>Choisir l'URL canonique entre <code>/progenda-agenda-en-ligne/</code> et <code>/progenda-agenda-en-ligne-en-2026/</code> (privilégier la plus ancienne et mieux positionnée).</li>
+      <li>Rediriger 301 la seconde vers la première, fusionner le contenu utile, régénérer le sitemap.</li>
+      <li>Réécrire les titles du top 20 pages (celles qui ressortent en §4.4 et §4.5) en visant des CTR de 3 à 6&nbsp;% selon la position.</li>
+      <li>Ajouter la configuration canonical pour exclure les fragments <code>#elementor-toc__heading-anchor-0</code>.</li>
+    </ol>
+    <div class="result"><b>Résultat attendu</b><span>≈ 400 clics/mois rattrapés sur « progenda », +200 à +350 clics sur le reste du top 20. ROI le plus élevé du rapport.</span></div>
+  </div>
+
+  <div class="qw-card tier2">
+    <h3>4. Déployer le balisage entité locale + note agrégée</h3>
+    <ol class="steps">
+      <li>Rassembler l'adresse siège, les horaires officiels, la liste des provinces desservies, la fourchette tarifaire (€€), la note moyenne Google Reviews et le nombre exact d'avis.</li>
+      <li>Via Rank Math ou Yoast SEO Premium, activer le module Schema et créer un bloc <em>LocalBusiness</em> de type <em>ProfessionalService</em> avec tous les champs ci-dessus.</li>
+      <li>Ajouter un sous-bloc <em>aggregateRating</em> avec la note réelle et le nombre d'avis, strictement aligné sur la fiche Google Business Profile publique.</li>
+      <li>Valider avec l'outil Rich Results de Google.</li>
+    </ol>
+    <div class="result"><b>Résultat attendu</b><span>Éligibilité aux étoiles dans les résultats Google, apparition potentielle dans le pack local Maps, citation possible dans les AI Overviews pour « télésecrétariat Belgique ».</span></div>
+  </div>
+
+  <div class="qw-card tier2">
+    <h3>5. Ajouter une capture email « Guide choix télésecrétariat »</h3>
+    <ol class="steps">
+      <li>Créer un PDF de 4 à 6 pages « Checklist : choisir son télésecrétariat médical en Belgique — les 12 critères décisifs » à partir des articles existants.</li>
+      <li>Dans Elementor, ajouter en footer (toutes pages) un bloc « Recevez notre guide gratuit » avec un champ email unique.</li>
+      <li>Connecter le formulaire à Brevo (gratuit ≤ 300 envois/jour) avec une séquence&nbsp;: email 1 (guide), email 2 à J+3, email 3 à J+7.</li>
+      <li>Ajouter la mention RGPD conforme.</li>
+    </ol>
+    <div class="result"><b>Résultat attendu</b><span>Capture des 70 à 85&nbsp;% de visiteurs « en réflexion » qui quittaient le site sans laisser de trace&nbsp;; base email exploitable pour campagnes saisonnières.</span></div>
+  </div>
+
+  <div class="qw-card tier2">
+    <h3>6. Dupliquer la FAQPage AlexIA sur MediVoice, ProAssist et Agenda</h3>
+    <ol class="steps">
+      <li>Demander aux secrétaires les 6 à 8 questions les plus fréquentes par segment de service.</li>
+      <li>Rédiger pour chaque question une réponse de 50 à 80 mots, factuelle, directe, sans préambule.</li>
+      <li>Intégrer les blocs dans chaque page via le même mécanisme que <code>/telesecretariat-ia</code> (Elementor + plugin schema).</li>
+    </ol>
+    <div class="result"><b>Résultat attendu</b><span>Triplement de la surface FAQ extractible par les moteurs d'IA, meilleure couverture des requêtes People-Also-Ask spécifiques à chaque ligne de service.</span></div>
+  </div>
+</section>
+
+<!-- 9. AUTOMATION -->
+<section id="automation">
+  <div class="sec-head">
+    <span class="sec-num">09 / 16</span>
+    <h2>Matrice d'automatisation — AI Gap</h2>
+  </div>
+  <p class="sec-lead">Chantiers d'automatisation classés par ratio impact/effort. Chaque ligne indique l'écart entre la situation actuelle et la situation augmentée par les agents Banana Navy, avec la charge hebdomadaire récupérable.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="num">#</th><th>Domaine</th><th>Situation actuelle</th><th>Augmentée par Banana Navy</th><th class="num">H/sem</th><th>Diff.</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>SEO — Balisage structuré</td><td>Schema minimal (WebSite + Organization)</td><td>Agent Banana Navy génère et maintient le balisage entité locale + avis + FAQ à chaque nouvelle page&nbsp;; contrôle humain sur chaque déploiement</td><td class="num">2–3h</td><td><span class="pri easy">Easy</span></td></tr>
+        <tr><td class="num">2</td><td>Contenu — Blog</td><td>12+ articles publiés à cadence artisanale</td><td>Pipeline Banana Navy de 2 à 4 articles/mois pré-rédigés depuis la FAQ entrante, relus et validés humain avant publication</td><td class="num">6–8h</td><td><span class="pri medium">Medium</span></td></tr>
+        <tr><td class="num">3</td><td>Site — Pré-qualification</td><td>FAQ statique sur une page</td><td>Agent chatbot Banana Navy — surface et prépare le contexte des demandes entrantes 24/7&nbsp;; les réponses personnalisées restent rédigées par les secrétaires Spit'Up</td><td class="num">4–6h</td><td><span class="pri medium">Medium</span></td></tr>
+        <tr><td class="num">4</td><td>SEO — Metas &amp; titres</td><td>5 pages hors-fenêtre + 2 alias dupliqués</td><td>Agent Banana Navy de monitoring qui détecte les écarts et propose des correctifs à valider par l'équipe</td><td class="num">1–2h</td><td><span class="pri easy">Easy</span></td></tr>
+        <tr><td class="num">5</td><td>Avis — Review management</td><td>Témoignages HTML non structurés, note 4,9 non publiée</td><td>Agent Banana Navy collecte les nouveaux avis Google, les pousse en balisage <em>Review</em>, alerte sur avis &lt; 4 pour réponse manuelle</td><td class="num">2h</td><td><span class="pri easy">Easy</span></td></tr>
+        <tr><td class="num">6</td><td>Contenu local — Régions</td><td>0 landing régionale dédiée</td><td>Agent Banana Navy prépare 5 landings (Bruxelles, Liège, Charleroi, Namur, Mons) à partir d'un template géolocalisé — relecture et publication par l'équipe</td><td class="num">3h /one-shot</td><td><span class="pri medium">Medium</span></td></tr>
+        <tr><td class="num">7</td><td>Email — Capture &amp; nurturing</td><td>Pas de capture simple visible</td><td>Formulaire lead magnet + séquence de 5 emails déclenchée à l'inscription opt-in — chaque message relu avant activation</td><td class="num">2–3h</td><td><span class="pri medium">Medium</span></td></tr>
+        <tr><td class="num">8</td><td>GEO — Tracking IA</td><td>Aucun suivi de citations dans ChatGPT/Perplexity</td><td>Agent Banana Navy teste chaque mois les requêtes-cibles dans les 4 moteurs IA, rapport de citations livré à l'équipe</td><td class="num">1h</td><td><span class="pri easy">Easy</span></td></tr>
+        <tr><td class="num">9</td><td>Pipeline éditorial multi-canal</td><td>Production manuelle, cadence irrégulière</td><td>4 contenus/semaine préparés depuis le blog, adaptés par canal, planifiés après relecture par l'équipe</td><td class="num">4–5h</td><td><span class="pri medium">Medium</span></td></tr>
+        <tr><td class="num">10</td><td>Veille — Concurrents</td><td>Pas de veille structurée apparente</td><td>Agent Banana Navy surveille les 5 principaux concurrents belges (tarifs, offres, landings) et alerte sur changements</td><td class="num">2h</td><td><span class="pri medium">Medium</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout warn">
+    <div class="callout-title">Total récupérable</div>
+    <b>27 à 36h/semaine</b> récupérées sur des tâches à faible valeur ajoutée, redéployables sur la production secrétariat et la relation client. À temps plein équivalent, c'est <b>0,7 à 1 ETP</b> rendu à la production cœur de métier.
+  </div>
+</section>
+
+<!-- 10. ROADMAP -->
+<section id="roadmap">
+  <div class="sec-head">
+    <span class="sec-num">10 / 16</span>
+    <h2>Feuille de route 30 / 60 / 90 jours</h2>
+  </div>
+  <p class="sec-lead">Trois sprints : d'abord la fondation structurée, puis les premières automatisations, enfin l'expansion éditoriale et la mesure AI Search.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th style="width:14%">Sprint</th><th>Actions</th><th style="width:18%">Outil</th><th style="width:24%">Métrique de succès</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>Mois 1</b><br/><em>Foundation</em></td>
+          <td>
+            <ol style="margin:0;padding-left:18px">
+              <li>Déployer le balisage entité locale + note agrégée (QW 4).</li>
+              <li>Fusionner <code>/contact/</code> et <code>/contactez-spitup/</code>.</li>
+              <li>Fusionner les 2 pages Progenda + réécrire titles/metas du top 20.</li>
+              <li>Normaliser titles et metas des 5 pages hors-fenêtre.</li>
+              <li>Installer Brevo et déployer la capture email + guide (QW 5).</li>
+            </ol>
+          </td>
+          <td>Rank Math · Redirection · Brevo</td>
+          <td>100&nbsp;% des pages service avec balisage valide&nbsp;; ≥ 20 emails capturés&nbsp;; <b>cannibalisation Progenda résolue</b></td>
+        </tr>
+        <tr>
+          <td><b>Mois 2</b><br/><em>First automations</em></td>
+          <td>
+            <ol style="margin:0;padding-left:18px">
+              <li>Déployer l'agent chatbot Banana Navy de pré-qualification sur MediVoice et AlexIA.</li>
+              <li>Dupliquer la FAQPage sur 3 lignes de service (QW 6).</li>
+              <li>Activer la séquence email de nurturing (5 messages sur 21 jours).</li>
+              <li>Créer 3 landings régionales (Liège, Bruxelles, Charleroi).</li>
+              <li>Investigation écart desktop/mobile (Core Web Vitals).</li>
+            </ol>
+          </td>
+          <td>Agents Banana Navy · Brevo</td>
+          <td>≥ 15 pré-qualifications qualifiées/mois&nbsp;; 3 landings en ligne&nbsp;; CTR email ≥ 18&nbsp;%</td>
+        </tr>
+        <tr>
+          <td><b>Mois 3</b><br/><em>Expansion</em></td>
+          <td>
+            <ol style="margin:0;padding-left:18px">
+              <li>Pipeline blog (4 articles/mois, relus avant publication).</li>
+              <li>Tracking AI visibility sur 10 requêtes-cibles (ChatGPT, Perplexity, Google AI Overviews, Gemini).</li>
+              <li>Veille concurrentielle sur 5 acteurs belges.</li>
+              <li>Extension du balisage <em>Article</em> aux 10 posts les plus lus.</li>
+              <li>Maillage interne vers les 10 pages enterrées (§4.5).</li>
+            </ol>
+          </td>
+          <td>Agents Banana Navy (contenu · AI viz · competitor)</td>
+          <td>Spit'Up cité sur ≥ 3 requêtes-cibles dans les moteurs IA&nbsp;; <b>+30&nbsp;% de clics organiques (640 → 830)</b>&nbsp;; <b>CTR 1,8&nbsp;% · position &lt; 9</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 11. STRATÉGIE GEO -->
+<section id="strategie">
+  <div class="sec-head">
+    <span class="sec-num">11 / 16</span>
+    <h2>Stratégie GEO + AI Search</h2>
+  </div>
+  <p class="sec-lead">Anticiper la mutation des SERP : penser citation IA plutôt que clic Google.</p>
+
+  <h3 style="margin-top:24px;font-family:'Instrument Serif',serif;font-size:28px;font-weight:400">Cinq sujets « AI-Ready »</h3>
+  <ol style="font-size:15px;line-height:1.7">
+    <li><b>« Télésecrétariat médical en Belgique : tarifs, formules et aide Impulseo III en 2026 »</b> — couvre les requêtes tarifaires et la déduction fiscale médicale, fort potentiel de citation.</li>
+    <li><b>« Cabinet médical surchargé : quand externaliser la prise de rendez-vous ? »</b> — cible les indépendants médicaux en questionnement, réutilise les articles existants.</li>
+    <li><b>« IA vs secrétaire humaine : quel modèle choisir pour un cabinet belge ? »</b> — angle AlexIA vs équipe humaine, répond à une requête récurrente.</li>
+    <li><b>« RGPD et télésecrétariat médical : ce qu'il faut vérifier chez son prestataire »</b> — contenu de conformité, fort signal E-E-A-T.</li>
+    <li><b>« Télésecrétariat Bruxelles / Wallonie : différences de service et zones couvertes »</b> — contenu local pur, nourrit les landings régionales.</li>
+  </ol>
+
+  <h3 style="margin-top:36px;font-family:'Instrument Serif',serif;font-size:28px;font-weight:400">Stratégie de citations</h3>
+  <ul style="font-size:15px;line-height:1.7">
+    <li><b>Inscriptions vérifiées&nbsp;:</b> Pages d'Or, Gouden Gids, Infobel.be, Trustpilot (absent à ce jour), contrôle d'exhaustivité de la fiche Google Business Profile.</li>
+    <li><b>Annuaires médicaux&nbsp;:</b> SSMG (Société Scientifique de Médecine Générale), Domusmedica (Flandre), ABSyM, annuaires santé par province.</li>
+    <li><b>Annuaires B2B&nbsp;:</b> UCM, UNIZO, Chambres de Commerce Hainaut / Liège / Bruxelles.</li>
+    <li><b>Presse&nbsp;:</b> pitch éditorial vers Le Soir Sponsorisé, L'Écho, Trends-Tendances sur le sujet « externalisation + IA pour cabinets médicaux belges ».</li>
+    <li><b>Partenaires existants&nbsp;:</b> demander un lien retour depuis ssmg.be, tempo-team.be, prowebba.com lorsque pertinent.</li>
+  </ul>
+
+  <h3 style="margin-top:36px;font-family:'Instrument Serif',serif;font-size:28px;font-weight:400">Trois paires Q/R FAQ prêtes à l'emploi</h3>
+
+  <div class="card">
+    <h4>Q · Combien coûte un télésecrétariat médical en Belgique en 2026 ?</h4>
+    <p>Un télésecrétariat médical professionnel en Belgique démarre généralement <b>à partir de 129&nbsp;€ par mois</b> pour une permanence téléphonique de base. Le tarif final dépend du volume d'appels mensuels, des plages horaires couvertes, des intégrations agenda/CRM et des scénarios métier. Les médecins généralistes belges peuvent récupérer jusqu'à 50&nbsp;% du coût via l'aide Impulseo III, ce qui ramène le coût net à moins de 65&nbsp;€ par mois.</p>
+    <p><em>Implémentation : FAQPage sur la page d'accueil via Rank Math, réponse de 60+ mots.</em></p>
+  </div>
+
+  <div class="card">
+    <h4>Q · Un télésecrétariat peut-il gérer les urgences médicales la nuit ?</h4>
+    <p>Oui, un télésecrétariat médical professionnel prend en charge les appels en dehors des heures de consultation et applique un protocole d'urgence défini avec le cabinet. Les cas identifiés comme urgents sont transférés en direct au médecin de garde ou au 112 selon les règles préétablies&nbsp;; les cas non urgents sont consignés en message pour traitement au retour du cabinet. Chez Spit'Up, ce protocole est configuré pour chaque cabinet et respecté à l'identique par toute l'équipe.</p>
+    <p><em>Implémentation : FAQPage sur MediVoice, réponse de 70+ mots.</em></p>
+  </div>
+
+  <div class="card">
+    <h4>Q · Quelle différence entre une secrétaire IA (AlexIA) et une secrétaire humaine chez Spit'Up ?</h4>
+    <p>AlexIA est disponible 24h/24, traite un volume illimité d'appels en parallèle et prend en charge les tâches standardisées (prise de rendez-vous, renseignement, pré-qualification). La secrétaire humaine apporte la nuance relationnelle, la gestion des cas sensibles et la compréhension des situations hors-protocole. Le modèle hybride Spit'Up combine les deux&nbsp;: AlexIA décroche en priorité, transfère à l'humain quand la situation le requiert.</p>
+    <p><em>Implémentation : FAQPage sur la page AlexIA (en complément des 8 Q/R existantes), réponse de 60+ mots.</em></p>
+  </div>
+</section>
+
+<!-- 12. STACK -->
+<section id="stack">
+  <div class="sec-head">
+    <span class="sec-num">12 / 16</span>
+    <h2>Tool Stack recommandé</h2>
+  </div>
+  <p class="sec-lead">L'outillage minimum pour exécuter la roadmap. Free tier privilégié partout où il existe.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Outil</th><th>Apport</th><th>Free tier</th><th>Priorité</th><th>Setup</th></tr></thead>
+      <tbody>
+        <tr><td>Rank Math (ou Yoast SEO Premium)</td><td>Balisage entité locale + note agrégée + FAQ structurée</td><td>Oui</td><td><span class="pri haute">Haute</span></td><td>1h</td></tr>
+        <tr><td>Brevo</td><td>Email marketing, séquences nurturing, transactionnel</td><td>Oui (≤ 300 envois/jour)</td><td><span class="pri haute">Haute</span></td><td>2h</td></tr>
+        <tr><td>Agent chatbot Banana Navy</td><td>Surface et prépare le contexte des demandes entrantes 24/7</td><td>Inclus dans le workflow Banana Navy</td><td><span class="pri haute">Haute</span></td><td>Banana Navy</td></tr>
+        <tr><td>Agent Banana Navy (schema + SEO monitor)</td><td>Génère et maintient le balisage structuré sur toutes les nouvelles pages</td><td>Inclus</td><td><span class="pri haute">Haute</span></td><td>Banana Navy</td></tr>
+        <tr><td>Agent Banana Navy (content pipeline)</td><td>Pipeline blog mensuel, adaptation multi-canal, planification</td><td>Inclus</td><td><span class="pri moyenne">Moyenne</span></td><td>Banana Navy</td></tr>
+        <tr><td>Agent Banana Navy (AI visibility tracking)</td><td>Suivi mensuel des citations ChatGPT / Perplexity / Gemini / AI Overviews</td><td>Inclus</td><td><span class="pri moyenne">Moyenne</span></td><td>Banana Navy</td></tr>
+        <tr><td>Metricool ou Buffer</td><td>Planification multi-canal</td><td>Oui</td><td><span class="pri moyenne">Moyenne</span></td><td>1h</td></tr>
+        <tr><td>Google Search Console + GA4</td><td>Monitoring trafic, impressions, positionnement</td><td>Oui</td><td><span class="pri maintenir">Maintenir</span></td><td>Déjà en place</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 13. RÉPUTATION -->
+<section id="reputation">
+  <div class="sec-head">
+    <span class="sec-num">13 / 16</span>
+    <h2>Signaux de réputation</h2>
+  </div>
+  <div class="card">
+    <p>Aucun signal négatif relevé dans Google sur les requêtes « Spit'Up arnaque / plainte / problème / avis négatif / forum ». Les témoignages visibles sur le site et les profils Google Reviews affichent un retour positif cohérent (responsivité, professionnalisme des secrétaires, qualité des transferts médicaux). Trustpilot ne recense pas la marque à ce jour — opportunité d'inscription et de sollicitation d'avis à intégrer au workflow Banana Navy.</p>
+    <p>La note <b>4,9/5</b> revendiquée doit être confirmée en lecture directe de la fiche Google Business Profile et alignée dans le bloc de note agrégée une fois déployé (cf. Quick Win 4).</p>
+  </div>
+</section>
+
+<!-- 14. KPI -->
+<section id="kpi">
+  <div class="sec-head">
+    <span class="sec-num">14 / 16</span>
+    <h2>KPI à suivre — cibles 90 jours</h2>
+  </div>
+  <p class="sec-lead">Six indicateurs mesurables dans Google Search Console. Baseline = moyenne 28 jours au 22 avril 2026.</p>
+
+  <div class="target-grid">
+    <div class="target">
+      <div class="t-label">Clics totaux mensuels</div>
+      <div class="t-now">Baseline · <b>640</b></div>
+      <div class="t-goal">830 <small>+30&nbsp;%</small></div>
+    </div>
+    <div class="target">
+      <div class="t-label">CTR moyen</div>
+      <div class="t-now">Baseline · <b>1,05&nbsp;%</b></div>
+      <div class="t-goal">1,8&nbsp;%</div>
+    </div>
+    <div class="target">
+      <div class="t-label">Position moyenne</div>
+      <div class="t-now">Baseline · <b>10,5</b></div>
+      <div class="t-goal">&lt; 9</div>
+    </div>
+    <div class="target">
+      <div class="t-label">Clics « progenda »</div>
+      <div class="t-now">Baseline · <b>10</b></div>
+      <div class="t-goal">40+</div>
+    </div>
+    <div class="target">
+      <div class="t-label">URL avec fragment indexées</div>
+      <div class="t-now">Baseline · <b>~2&nbsp;667 impr.</b></div>
+      <div class="t-goal">0</div>
+    </div>
+    <div class="target">
+      <div class="t-label">Écart desktop/mobile</div>
+      <div class="t-now">Baseline · <b>6,4 pos.</b></div>
+      <div class="t-goal">&lt; 2</div>
+    </div>
+  </div>
+</section>
+
+<!-- 15. NEXT STEPS -->
+<section id="next">
+  <div class="sec-head">
+    <span class="sec-num">15 / 16</span>
+    <h2>Prochaines étapes</h2>
+  </div>
+  <p class="sec-lead">Quatre actions pour démarrer dans les 14 jours, owner et deadline assignés.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="num">#</th><th>Action</th><th>Owner</th><th>Outil</th><th>Deadline</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Fusionner <code>/contact/</code> et <code>/contactez-spitup/</code> + normaliser les 5 titles hors-fenêtre</td><td>Admin Spit'Up</td><td>WordPress + Redirection</td><td><b>J+3</b></td></tr>
+        <tr><td class="num">2</td><td>Déployer le balisage entité locale + note agrégée sur l'accueil et les 5 pages service</td><td>Dév. Spit'Up + Banana Navy</td><td>Rank Math + agent Banana Navy</td><td><b>J+7</b></td></tr>
+        <tr><td class="num">3</td><td>Session discovery Banana Navy : valider outils existants (CRM, email, booking) et cadrer le workflow complet</td><td>Direction Spit'Up</td><td>Visio 45 min</td><td><b>J+10</b></td></tr>
+        <tr><td class="num">4</td><td>Fusion Progenda + réécriture top 20 titles/metas</td><td>Admin Spit'Up + rédacteur</td><td>WordPress + Rank Math</td><td><b>J+14</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 16. CONTINU -->
+<section id="continu" class="continu">
+  <div class="sec-num" style="color:var(--banana);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;margin-bottom:18px">16 / 16 · UPSELL</div>
+  <h2>Cet audit est une <i>photo</i>.<br/>Votre marché est un <i>film</i>.</h2>
+  <p class="pitch">Les signaux SEO et GEO bougent chaque semaine — nouvelles requêtes, nouveaux concurrents, nouveaux moteurs IA. Banana Navy transforme cette photographie en suivi vivant, et exécute les Quick Wins à votre place pendant que vos secrétaires se concentrent sur leurs cabinets.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Prestation</th><th>Audit one-shot</th><th>Banana Navy en continu</th></tr></thead>
+      <tbody>
+        <tr><td><b>Audit SEO &amp; GEO complet</b></td><td class="muted">Oui</td><td><b>Mis à jour mensuellement</b></td></tr>
+        <tr><td><b>Score de préparation GEO</b></td><td class="muted">Oui</td><td><b>Suivi hebdomadaire</b></td></tr>
+        <tr><td><b>Matrice AI Gap</b></td><td class="muted">Oui</td><td><b>Mise à jour dynamique</b></td></tr>
+        <tr><td><b>Quick Wins identifiés</b></td><td class="muted">Liste seule</td><td><b>Exécutés par les agents Banana Navy</b></td></tr>
+        <tr><td><b>Tracking citations IA</b></td><td class="muted">Non inclus</td><td><b>10 requêtes-cibles, 4 moteurs, mensuel</b></td></tr>
+        <tr><td><b>Rapport de performance</b></td><td class="muted">Non inclus</td><td><b>Hebdomadaire, livré le lundi</b></td></tr>
+        <tr><td><b>Veille concurrentielle</b></td><td class="muted">Non inclus</td><td><b>5 acteurs belges, alertes en temps réel</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="mailto:hello@banana-navy.com?subject=Activer%20le%20suivi%20continu%20Banana%20Navy" class="cta">Activer la surveillance continue Banana Navy</a>
+
+  <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.18);display:grid;grid-template-columns:repeat(3,1fr);gap:32px;color:rgba(255,255,255,.75);font-size:13.5px">
+    <div>
+      <div style="color:var(--banana);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">Exécution</div>
+      <p style="margin:0">Vous avez maintenant le plan. Si vous n'avez pas le temps de l'exécuter, nos agents le font pour vous — sous contrôle humain à chaque étape.</p>
+    </div>
+    <div>
+      <div style="color:var(--banana);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">Veille</div>
+      <p style="margin:0">Google et les IA changent leurs algorithmes chaque semaine. Sans surveillance continue, l'audit d'aujourd'hui sera obsolète dans 6 mois.</p>
+    </div>
+    <div>
+      <div style="color:var(--banana);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">Efficience</div>
+      <p style="margin:0">27 à 36h/semaine récupérées sur des tâches à faible valeur ajoutée — votre équipe redéployée sur la production cœur de métier.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="left">
+    <span class="bn-mark"><span class="dot"></span>Banana Navy</span>
+    <h4>Strategy &amp; AI agents — for businesses that intend to keep up.</h4>
+    <p style="color:var(--ink-mute);font-size:12.5px;margin:0;max-width:520px">Audit livré le 22 avril 2026 · Données Google Search Console · Période de référence 28 jours · Tendance 17/01 → 16/04/2026 · Confidentiel — usage interne Spit'Up Call Solutions.</p>
+  </div>
+  <div class="right">
+    Banana Navy<br/>
+    hello@banana-navy.com<br/>
+    banana-navy.com
+  </div>
+</footer>
+
+</div>
+
+<script>
+  // TOC active highlight
+  const sections = document.querySelectorAll('section[id]');
+  const tocLinks = document.querySelectorAll('.toc-inner a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
