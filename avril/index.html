@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Votre audit SEO &amp; GEO est prêt — Banana Navy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1F3D;
+    --navy-deep:#06152A;
+    --banana:#FFD93D;
+    --banana-soft:#FFE680;
+    --banana-deep:#E5B800;
+    --paper:#FBF9F2;
+    --paper-2:#F4F0E2;
+    --ink:#0A1F3D;
+    --ink-mute:#4A5A75;
+    --line:#D8D2BE;
+    --danger:#B83A26;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:48px 24px;background:#E8E2D0;font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:var(--ink);font-feature-settings:"ss01" 1,"tnum" 1}
+
+  /* MAIL CLIENT CHROME (preview only — gives email-context feel) */
+  .mail-shell{max-width:720px;margin:0 auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -20px rgba(10,31,61,.25),0 4px 16px -4px rgba(10,31,61,.08)}
+  .mail-bar{background:#fff;padding:14px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.06em}
+  .mail-bar .dot{width:10px;height:10px;border-radius:50%;background:#FF5F57}
+  .mail-bar .dot.y{background:#FFBD2E}
+  .mail-bar .dot.g{background:#28CA42}
+  .mail-bar .label{margin-left:14px}
+
+  .mail-meta{padding:22px 32px 18px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr auto;gap:12px 14px;align-items:center}
+  .mail-meta .avatar{width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--banana);display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:20px;grid-row:span 2;position:relative}
+  .mail-meta .avatar::after{content:"";position:absolute;bottom:0;right:-2px;width:14px;height:14px;background:var(--banana);border-radius:50%;border:2px solid #fff}
+  .mail-meta .from{font-weight:600;font-size:14px;color:var(--ink)}
+  .mail-meta .from span{color:var(--ink-mute);font-weight:400}
+  .mail-meta .to{font-size:13px;color:var(--ink-mute);font-family:'Geist Mono',monospace;letter-spacing:.02em}
+  .mail-meta .date{font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);text-align:right;letter-spacing:.04em;grid-row:span 2;align-self:center}
+
+  /* SUBJECT */
+  .mail-subject{padding:20px 32px 0;font-family:'Instrument Serif',serif;font-size:30px;line-height:1.15;font-weight:400;letter-spacing:-.01em}
+  .mail-subject i{font-style:italic;color:var(--banana-deep)}
+  .mail-preheader{padding:6px 32px 18px;color:var(--ink-mute);font-size:13.5px;border-bottom:1px solid var(--line)}
+
+  /* HERO BLOCK */
+  .hero{background:var(--navy);color:var(--paper);padding:36px 32px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;background:radial-gradient(circle,var(--banana-soft) 0%,transparent 65%);opacity:.18}
+  .hero .bn-mark{display:inline-flex;align-items:center;gap:9px;font-family:'Instrument Serif',serif;font-size:18px;color:var(--paper);margin-bottom:24px}
+  .hero .bn-mark .d{width:9px;height:9px;background:var(--banana);border-radius:999px;display:inline-block;box-shadow:0 0 0 3px var(--navy),0 0 0 4px var(--banana-soft)}
+  .hero .bn-mark em{font-style:italic;color:var(--banana-soft);font-size:12px;letter-spacing:.04em}
+  .hero h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:38px;line-height:1.05;letter-spacing:-.015em;margin:0 0 12px;color:var(--paper)}
+  .hero h1 i{color:var(--banana);font-style:italic}
+  .hero .sub{color:rgba(255,255,255,.78);font-size:15px;line-height:1.55;margin:0;max-width:540px}
+
+  /* HEADLINES STAT BAR */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:#fff;border-bottom:1px solid var(--line)}
+  .stats div{padding:20px 22px;border-right:1px solid var(--line);text-align:left}
+  .stats div:last-child{border-right:none}
+  .stats .lbl{font-family:'Geist Mono',monospace;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px}
+  .stats .val{font-family:'Instrument Serif',serif;font-size:32px;line-height:1;color:var(--navy);font-weight:400}
+  .stats .val em{font-size:14px;color:var(--banana-deep);font-style:italic;margin-left:2px}
+  .stats .delta{font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);margin-top:6px;letter-spacing:.04em}
+
+  /* BODY */
+  .body{padding:32px;font-size:15px;line-height:1.65;color:var(--ink)}
+  .body p{margin:0 0 14px}
+  .body .greeting{font-family:'Instrument Serif',serif;font-size:22px;font-style:italic;color:var(--navy);margin-bottom:18px}
+  .body strong{color:var(--ink)}
+  .body code{font-family:'Geist Mono',monospace;font-size:.86em;background:var(--paper-2);padding:1px 6px;border-radius:3px}
+
+  /* TLDR */
+  .tldr{background:var(--paper-2);border:1px solid var(--line);border-left:3px solid var(--banana-deep);border-radius:8px;padding:20px 24px;margin:20px 0 28px}
+  .tldr-title{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--banana-deep);margin-bottom:12px;font-weight:500}
+  .tldr ul{margin:0;padding-left:18px;font-size:14px}
+  .tldr li{margin-bottom:6px;color:var(--ink)}
+  .tldr li b{color:var(--navy)}
+
+  /* CTA PRIMARY */
+  .cta-block{background:linear-gradient(180deg,var(--paper) 0%,#fff 100%);border:1px solid var(--line);border-radius:12px;padding:28px;margin:28px 0;text-align:center}
+  .cta-block h3{font-family:'Instrument Serif',serif;font-size:24px;font-weight:400;line-height:1.2;margin:0 0 8px;letter-spacing:-.005em}
+  .cta-block h3 i{color:var(--banana-deep);font-style:italic}
+  .cta-block p{color:var(--ink-mute);font-size:13.5px;margin:0 0 18px}
+  .cta{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--banana);padding:16px 28px;border-radius:8px;font-family:'Geist',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease}
+  .cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(10,31,61,.4)}
+  .cta::after{content:"→";font-family:'Instrument Serif',serif;font-size:18px;font-style:italic}
+  .cta-secondary{display:inline-block;margin-left:14px;color:var(--ink-mute);font-size:13px;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+
+  /* HIGHLIGHT CARDS */
+  .highlights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+  .h-card{border:1px solid var(--line);border-radius:10px;padding:18px;background:#fff;transition:border-color .15s ease,transform .15s ease;cursor:pointer}
+  .h-card:hover{border-color:var(--banana-deep);transform:translateY(-1px)}
+  .h-card .num{font-family:'Instrument Serif',serif;font-style:italic;font-size:38px;color:var(--banana-deep);line-height:.9;margin-bottom:6px;letter-spacing:-.02em}
+  .h-card .ttl{font-family:'Geist',sans-serif;font-weight:600;font-size:14px;color:var(--navy);margin-bottom:6px;line-height:1.3}
+  .h-card .desc{font-size:12.5px;color:var(--ink-mute);line-height:1.45;margin:0}
+
+  /* INTERACTIVE: COLLAPSIBLE 3 FREINS */
+  .accordion{margin:24px 0}
+  .accordion-title{font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:10px}
+  .acc-item{border:1px solid var(--line);border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff}
+  .acc-item summary{list-style:none;cursor:pointer;padding:16px 20px;display:flex;align-items:center;gap:14px;font-weight:500;font-size:14.5px;color:var(--ink);position:relative}
+  .acc-item summary::-webkit-details-marker{display:none}
+  .acc-item summary::after{content:"+";margin-left:auto;font-family:'Instrument Serif',serif;font-size:24px;color:var(--banana-deep);transition:transform .2s ease;line-height:1}
+  .acc-item[open] summary::after{transform:rotate(45deg)}
+  .acc-item summary .badge{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.16em;background:var(--paper-2);color:var(--ink-mute);padding:3px 8px;border-radius:3px;text-transform:uppercase}
+  .acc-item .acc-body{padding:0 20px 18px 20px;color:var(--ink-mute);font-size:13.5px;line-height:1.6}
+  .acc-item .acc-body b{color:var(--ink)}
+  .acc-item.critical{border-left:3px solid var(--danger)}
+  .acc-item.critical summary .badge{background:#FBEBE6;color:var(--danger)}
+
+  /* INTERACTIVE: ROADMAP TABS */
+  .roadmap{margin:28px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+  .rm-tabs{display:grid;grid-template-columns:repeat(3,1fr);background:var(--paper-2);border-bottom:1px solid var(--line)}
+  .rm-tab{padding:14px 16px;text-align:center;cursor:pointer;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);border-right:1px solid var(--line);transition:all .15s ease;background:transparent;border-top:none;border-bottom:none;border-left:none;font-weight:500}
+  .rm-tab:last-child{border-right:none}
+  .rm-tab.active{background:#fff;color:var(--navy);box-shadow:inset 0 -2px 0 var(--banana)}
+  .rm-tab:hover:not(.active){color:var(--navy);background:rgba(255,255,255,.5)}
+  .rm-panel{padding:22px 24px;display:none}
+  .rm-panel.active{display:block}
+  .rm-panel h4{font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;margin:0 0 4px;color:var(--navy)}
+  .rm-panel .when{font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--banana-deep);margin-bottom:14px}
+  .rm-panel ul{margin:8px 0 12px;padding-left:18px;font-size:13.5px;color:var(--ink-mute)}
+  .rm-panel ul li{margin-bottom:5px}
+  .rm-panel ul li b{color:var(--ink)}
+  .rm-panel .metric{margin-top:14px;padding:12px 14px;background:var(--paper-2);border-radius:6px;font-size:12.5px;color:var(--ink)}
+  .rm-panel .metric b{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--banana-deep);display:block;margin-bottom:4px;font-weight:500}
+
+  /* FREIN HEADLINE NUMBERS */
+  .opp{margin:26px 0;padding:24px 26px;background:var(--navy);color:var(--paper);border-radius:12px;display:flex;align-items:center;gap:24px;position:relative;overflow:hidden}
+  .opp::after{content:"";position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;background:radial-gradient(circle,var(--banana) 0%,transparent 70%);opacity:.22}
+  .opp .big{font-family:'Instrument Serif',serif;font-style:italic;font-size:56px;color:var(--banana);line-height:.9;letter-spacing:-.02em;flex-shrink:0}
+  .opp .big small{font-size:13px;color:var(--paper);font-style:normal;font-family:'Geist Mono',monospace;letter-spacing:.1em;display:block;margin-top:4px}
+  .opp .text{font-size:14px;line-height:1.5}
+  .opp .text b{color:var(--banana)}
+
+  /* SIGN OFF */
+  .signoff{margin:28px 0 8px;font-size:14.5px;line-height:1.6;color:var(--ink)}
+  .signoff .name{font-family:'Instrument Serif',serif;font-size:22px;font-style:italic;color:var(--navy);margin:14px 0 4px}
+  .signoff .title{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--ink-mute);text-transform:uppercase}
+
+  .ps{margin-top:24px;padding-top:18px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink-mute);line-height:1.55}
+  .ps b{color:var(--navy);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:4px}
+
+  /* FOOTER */
+  .mail-foot{padding:24px 32px;background:var(--paper-2);border-top:1px solid var(--line);font-size:11.5px;color:var(--ink-mute);display:flex;justify-content:space-between;align-items:center;font-family:'Geist Mono',monospace;letter-spacing:.04em}
+  .mail-foot a{color:var(--ink-mute);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;margin-left:12px}
+
+  /* PREVIEW HEADER (outside the email) */
+  .preview-meta{max-width:720px;margin:0 auto 14px;display:flex;justify-content:space-between;align-items:center;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute)}
+  .preview-meta .pill{background:#fff;padding:6px 12px;border-radius:99px;border:1px solid var(--line);color:var(--navy)}
+  .preview-meta .pill b{color:var(--banana-deep)}
+
+  @media (max-width:680px){
+    body{padding:18px 10px}
+    .preview-meta{font-size:9.5px;letter-spacing:.12em;margin-bottom:10px;flex-direction:column;gap:6px;align-items:flex-start}
+    .mail-shell{border-radius:10px}
+    .mail-bar{padding:10px 16px;font-size:10px}
+    .mail-bar .label{margin-left:8px}
+    .mail-meta{padding:16px 18px 14px;grid-template-columns:auto 1fr;gap:8px 12px}
+    .mail-meta .avatar{width:38px;height:38px;font-size:18px}
+    .mail-meta .from{font-size:13px}
+    .mail-meta .to{font-size:11px;grid-column:1 / -1}
+    .mail-meta .date{grid-row:1;grid-column:2;text-align:right;font-size:10px}
+    .mail-subject{padding:16px 18px 0;font-size:22px;line-height:1.18}
+    .mail-preheader{padding:6px 18px 14px;font-size:12.5px}
+    .hero{padding:26px 20px}
+    .hero h1{font-size:26px}
+    .hero .sub{font-size:13.5px}
+    .hero .bn-mark{font-size:15px;margin-bottom:18px}
+    .stats{grid-template-columns:1fr}
+    .stats div{border-right:none;border-bottom:1px solid var(--line);padding:16px 18px}
+    .stats div:last-child{border-bottom:none}
+    .stats .val{font-size:26px}
+    .body{padding:22px 18px;font-size:14px;line-height:1.6}
+    .body .greeting{font-size:18px;margin-bottom:14px}
+    .tldr{padding:16px 18px;margin:16px 0 22px}
+    .tldr ul{font-size:13px;padding-left:16px}
+    .opp{flex-direction:column;align-items:flex-start;gap:10px;padding:20px 18px;margin:22px 0}
+    .opp .big{font-size:42px}
+    .opp .text{font-size:13.5px}
+    .accordion-title{font-size:10px;letter-spacing:.14em}
+    .acc-item summary{padding:14px 16px;font-size:13.5px;gap:10px;flex-wrap:wrap}
+    .acc-item summary .badge{font-size:9.5px;padding:2px 6px}
+    .acc-item .acc-body{padding:0 16px 14px;font-size:12.5px}
+    .highlights{grid-template-columns:1fr;gap:10px;margin:18px 0}
+    .h-card{padding:14px 16px}
+    .h-card .num{font-size:32px}
+    .h-card .ttl{font-size:13px}
+    .h-card .desc{font-size:12px}
+    .roadmap{margin:22px 0}
+    .rm-tabs{grid-template-columns:1fr}
+    .rm-tab{padding:12px 14px;border-right:none;border-bottom:1px solid var(--line);font-size:9.5px;letter-spacing:.14em}
+    .rm-tab.active{box-shadow:inset 3px 0 0 var(--banana)}
+    .rm-panel{padding:18px 18px}
+    .rm-panel h4{font-size:18px}
+    .rm-panel ul{font-size:12.5px;padding-left:16px}
+    .rm-panel .metric{font-size:12px;padding:10px 12px}
+    .cta-block{padding:22px 18px;margin:22px 0}
+    .cta-block h3{font-size:20px}
+    .cta-block p{font-size:12.5px}
+    .cta{padding:13px 20px;font-size:13px;width:100%;justify-content:center}
+    .cta-secondary{display:block;margin:12px 0 0;font-size:12.5px}
+    .signoff .name{font-size:18px}
+    .ps{font-size:12.5px;padding-top:14px;margin-top:18px}
+    .mail-foot{padding:16px 18px;font-size:10px;flex-direction:column;align-items:flex-start;gap:8px}
+    .mail-foot a{margin-left:0;margin-right:10px}
+  }
+</style>
+</head>
+<body>
+
+<div class="mail-shell">
+
+  <!-- Subject -->
+  <h1 class="mail-subject">Votre audit SEO &amp; GEO est prêt — <i>+400 clics/mois</i> à portée de main, sans nouveau contenu.</h1>
+  <p class="mail-preheader">Spitup.be · 28 jours de données GSC · 6 Quick Wins exécutables sous 14 jours · plan d'action personnalisé.</p>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="bn-mark"><span class="d"></span>Banana Navy <em>· strategy &amp; AI agents</em></div>
+    <h1>Bonjour Vincent,<br/>l'<i>audit</i> est livré.</h1>
+    <p class="sub">Voici la synthèse en 90 secondes, le lien vers le rapport complet, et la prochaine étape concrète. Le rapport intégral fait 16 sections — l'essentiel tient en 3 chiffres et 3 freins ci-dessous.</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div>
+      <div class="lbl">Score GEO</div>
+      <div class="val">43<em>/100</em></div>
+      <div class="delta">Palier · Growing</div>
+    </div>
+    <div>
+      <div class="lbl">CTR observé / attendu</div>
+      <div class="val">1,05<em>%</em></div>
+      <div class="delta">vs 2–3&nbsp;% à pos. 10,5</div>
+    </div>
+    <div>
+      <div class="lbl">Gain immédiat</div>
+      <div class="val">+400<em>clics</em></div>
+      <div class="delta">/mois · sans contenu neuf</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+    <p class="greeting">Vincent,</p>
+
+    <p>Comme convenu, voici l'audit complet SEO &amp; GEO de <code>spitup.be</code>, croisé avec 28 jours de données Google Search Console et la tendance 90 jours. Je vous ai préparé une lecture courte avant le rapport intégral — les chiffres ci-dessus posent le décor, le reste explique <strong>quoi faire dès cette semaine</strong>.</p>
+
+    <div class="tldr">
+      <div class="tldr-title">— Synthèse en 4 lignes</div>
+      <ul>
+        <li>Le site capte <b>640 clics/mois</b> pour <b>60&nbsp;780 impressions</b> — le trafic est sous son potentiel d'un facteur 2 à 3.</li>
+        <li>Trois freins majeurs identifiés (balisage entité locale absent, cannibalisation Progenda, preuve sociale non structurée).</li>
+        <li>Six Quick Wins chiffrés, exécutables en 14 jours — dont 2 actions &lt; 1h sans développeur.</li>
+        <li>Roadmap 30/60/90 jours posée, avec objectif <b>+30 % de clics organiques</b> au mois 3.</li>
+      </ul>
+    </div>
+
+    <!-- OPPORTUNITY -->
+    <div class="opp">
+      <div class="big">+400<small>CLICS / MOIS</small></div>
+      <div class="text">L'opportunité immédiate, c'est le mot-clé <b>« progenda »</b>&nbsp;: 8&nbsp;003 impressions, position 6,7 — et 10 clics seulement. Deux URL se cannibalisent sur la même requête. Consolidation = ≈ <b>400 clics/mois récupérés</b>, sans rédiger un mot.</div>
+    </div>
+
+    <!-- INTERACTIVE: 3 FREINS -->
+    <div class="accordion">
+      <div class="accordion-title">— Les 3 freins majeurs · cliquez pour déplier</div>
+
+      <details class="acc-item critical" open>
+        <summary>
+          <span>01 · Balisage entité locale absent</span>
+          <span class="badge">Critique · 1/10</span>
+        </summary>
+        <div class="acc-body">
+          <p>Le site déclare <b>WebSite</b> et <b>Organization</b>, mais aucune entité <b>LocalBusiness / ProfessionalService</b>, aucune adresse structurée, aucun téléphone balisé, aucune fourchette tarifaire. Google et les moteurs d'IA n'ont aucun objet « entreprise locale » exploitable pour Spit'Up.</p>
+          <p><b>Conséquence&nbsp;:</b> exclusion mécanique du pack local Maps et des AI Overviews type « trouve-moi un télésecrétariat à [ville] ».</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span>02 · Cannibalisation Progenda</span>
+          <span class="badge">Haute · 8&nbsp;003 impr.</span>
+        </summary>
+        <div class="acc-body">
+          <p><code>/progenda-agenda-en-ligne/</code> et <code>/progenda-agenda-en-ligne-en-2026/</code> se disputent le même mot-clé. Position moyenne 6,7, CTR <b>0,12 %</b> — alors que la position attendue donne 4 à 6 %.</p>
+          <p><b>Consolidation attendue&nbsp;:</b> position 3–4, CTR ×5 à ×10, soit ≈ <b>400 clics/mois récupérés</b>.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span>03 · Preuve sociale non structurée</span>
+          <span class="badge">Haute · 4,9/5</span>
+        </summary>
+        <div class="acc-body">
+          <p>Témoignages clients en HTML mais aucun balisage <b>Review</b> ni <b>aggregateRating</b>. La note revendiquée 4,9/5 n'alimente ni les étoiles dans Google, ni les AI Overviews.</p>
+          <p><b>Conséquence&nbsp;:</b> rich snippet perdu sur chaque requête marque + citation IA impossible (« quelle note a Spit'Up&nbsp;? »).</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="accordion-title" style="margin-top:8px">— Quatre Quick Wins à fort ROI</div>
+    <div class="highlights">
+      <div class="h-card">
+        <div class="num">01</div>
+        <div class="ttl">Fusionner Progenda</div>
+        <p class="desc">Une 301 + une réécriture de title. ≈ 400 clics/mois récupérés. ROI le plus élevé du rapport.</p>
+      </div>
+      <div class="h-card">
+        <div class="num">02</div>
+        <div class="ttl">Balisage LocalBusiness</div>
+        <p class="desc">+ aggregateRating 4,9/5. Étoiles Google + éligibilité AI Overviews + pack local Maps.</p>
+      </div>
+      <div class="h-card">
+        <div class="num">03</div>
+        <div class="ttl">Top 20 titles &amp; metas</div>
+        <p class="desc">+15 à 25 % de CTR sur 5 pages hors-fenêtre + le top 20. Sans nouveau contenu.</p>
+      </div>
+      <div class="h-card">
+        <div class="num">04</div>
+        <div class="ttl">Capture email + Brevo</div>
+        <p class="desc">Récupérer les 70 à 85 % de visiteurs « en réflexion » qui repartent sans laisser de trace.</p>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE: ROADMAP TABS -->
+    <div class="accordion-title" style="margin-top:24px">— La roadmap 30 / 60 / 90 jours · cliquez pour basculer</div>
+    <div class="roadmap">
+      <div class="rm-tabs" role="tablist">
+        <button class="rm-tab active" data-tab="m1">Mois 1 · Foundation</button>
+        <button class="rm-tab" data-tab="m2">Mois 2 · Automations</button>
+        <button class="rm-tab" data-tab="m3">Mois 3 · Expansion</button>
+      </div>
+      <div class="rm-panel active" data-panel="m1">
+        <div class="when">J+0 → J+30 · le socle</div>
+        <h4>Verrouiller la fondation structurée</h4>
+        <ul>
+          <li><b>Balisage entité locale + note agrégée</b> sur l'accueil et les 5 pages service.</li>
+          <li>Fusion <code>/contact/</code> + <code>/contactez-spitup/</code> et des deux URL Progenda.</li>
+          <li>Réécriture des 5 titles hors-fenêtre + top 20 metas.</li>
+          <li>Installation Brevo + capture email avec lead magnet.</li>
+        </ul>
+        <div class="metric"><b>Métrique de succès</b>100 % des pages service avec balisage valide · ≥ 20 emails capturés · cannibalisation Progenda résolue</div>
+      </div>
+      <div class="rm-panel" data-panel="m2">
+        <div class="when">J+31 → J+60 · les premiers agents</div>
+        <h4>Activer les premières automatisations</h4>
+        <ul>
+          <li>Déploiement de l'<b>agent chatbot Banana Navy</b> de pré-qualification (MediVoice + AlexIA).</li>
+          <li>Duplication FAQPage sur 3 lignes de service supplémentaires.</li>
+          <li>Activation de la séquence email de nurturing (5 messages sur 21 jours).</li>
+          <li>Création de 3 landings régionales (Liège, Bruxelles, Charleroi).</li>
+          <li>Investigation de l'écart desktop / mobile (Core Web Vitals).</li>
+        </ul>
+        <div class="metric"><b>Métrique de succès</b>≥ 15 pré-qualifications qualifiées/mois · 3 landings en ligne · CTR email ≥ 18 %</div>
+      </div>
+      <div class="rm-panel" data-panel="m3">
+        <div class="when">J+61 → J+90 · l'expansion</div>
+        <h4>Pipeline éditorial &amp; mesure AI Search</h4>
+        <ul>
+          <li>Pipeline blog Banana Navy (4 articles/mois, relus avant publication).</li>
+          <li>Tracking citations sur 10 requêtes-cibles dans 4 moteurs IA.</li>
+          <li>Veille concurrentielle sur 5 acteurs belges.</li>
+          <li>Maillage interne vers les 10 pages enterrées identifiées en §4.5.</li>
+        </ul>
+        <div class="metric"><b>Métrique de succès</b>Spit'Up cité sur ≥ 3 requêtes-cibles dans les moteurs IA · +30 % de clics (640 → 830) · CTR 1,8 % · position &lt; 9</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <h3>Le rapport complet est <i>prêt à lire</i>.</h3>
+      <p>16 sections, données GSC complètes, scripts d'exécution étape par étape pour les 6 Quick Wins.</p>
+      <a class="cta" href="audit.html">Ouvrir l'audit complet</a>
+      <a class="cta-secondary" href="audit.pdf" download>ou télécharger le PDF</a>
+    </div>
+
+    <p>Je suis disponible pour un call de 30 minutes pour des questions supplémentaires concernant l'audit.</p>
+
+    <div class="signoff">
+      <p>À très vite,</p>
+      <p class="name">Svetlana — Banana Navy</p>
+      <p class="title">Strategy &amp; AI agents · hello@banana-navy.com</p>
+    </div>
+
+    <div class="ps">
+      <b>P.S.</b>
+      Le mot-clé « progenda » m'a fait sursauter en data-mining&nbsp;: 8&nbsp;003 impressions/mois pour 10 clics, c'est l'asymétrie la plus brutale du rapport. Une seule redirection 301 + un title bien rédigé peut faire basculer 400 clics du jour au lendemain. Si vous voulez qu'on s'en occupe nous-mêmes via un agent Banana Navy, c'est inclus dans le forfait <em>Pilotage continu</em> — section 16 du rapport concernant des options supplémentaires.
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="mail-foot">
+    <span>BANANA NAVY · CONFIDENTIEL</span>
+    <span>
+      <a href="https://banana-navy.com">banana-navy.com</a>
+      <a href="#">se désabonner</a>
+    </span>
+  </div>
+
+</div>
+
+<script>
+  // Roadmap tabs
+  const tabs = document.querySelectorAll('.rm-tab');
+  const panels = document.querySelectorAll('.rm-panel');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      t.classList.add('active');
+      const target = t.getAttribute('data-tab');
+      document.querySelector(`.rm-panel[data-panel="${target}"]`).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
